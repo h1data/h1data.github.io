@@ -1,0 +1,116 @@
+body {
+  background-color: #182327;
+  color: #A2BECE;
+  padding: 1em;
+  margin: 0px;
+}
+
+i {
+  font-style: normal;
+  color: #D22;
+  font-size: smaller
+}
+
+a:link {
+  text-decoration: none;
+  color : #2AF;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #A7F;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+a:active {
+  color: red
+}
+
+h4, h5 {
+  border-style: solid none;
+  border-width: 1px;
+  font-weight: normal;
+}
+
+h4 {
+  border-color: #444 red #888;
+  font-size: 16px;
+  text-align: right
+}
+
+h5 {
+  border-color: #888 red #444;
+  font-size: 13px
+}
+
+h6{
+  border-style: dotted none;
+  border-width: 1px;
+  border-color: #efa;
+  color: #42;
+  font-weight: normal;
+  font-size: 13px
+}
+
+img#content {
+  border-width: 1px;
+  height: 96px;
+}
+
+p {
+  padding: 0em 1em;
+}
+
+hr {
+  border: 1px #444 outset;
+}
+
+table {
+  align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+
+tr {
+  border-style: solid;
+  border-width: 1px;
+}
+
+th {
+  font-weight: normal;
+  background-color: #232;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+
+td {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+
+caption {
+  align: center;
+  white-space: nowrap;
+}
+
+#num td{
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  font-family: monospace;
+  text-align: right;
+}
+
+#formula {
+  padding-left: 2em;
+  font-family: monospace;
+}
+
+address { text-align: center; }
+

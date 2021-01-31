@@ -1,0 +1,84 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="opm.css" type="text/css">
+  <title>examing VOPM - to understand and emulate the OPM sound</title>
+ </head>
+ <body>
+  <h2>OPMを知る ― VOPMの測定</h2>
+  <h3>目次</h3>
+  <p>
+   <ul>
+     <li><a href="#FMformula">FM合成の計算式</a></li>
+     <li><a href="#TL">TL: 最大音量または変調度</a></li>
+     (以下準備中)
+     <li>DL1: サスティンにおける音量または変調度</li>
+     <li>FL: フィードバックレベル</li>
+     <li>DT1、DT2: デチューン</li>
+     <li>AR: アタック速度</li>
+     <li>D2R: サスティン後の減衰速度</li>
+     <li>MAXによる再現例</li>
+    </ul>
+   <a href="./index.html">戻る</a>
+  </p>
+  <h3><span id="FMformula">FM合成の計算式</span></h3>
+   <p>YM2608 (OPNA) アプリケーションマニュアルや各種解説資料では、2つのオペレータを直列接続した際の出力波形について概ね下記の計算式が記載されています。</p>
+   <p><div id="formula">F(t) = A(t) * sin(wc*t + I(t)sin(wm*t))</div></p>
+   <p>A(t)は出力波形の振幅すなわち音量となるため、エンベロープの設定の他、ミキサーのフェードを上げ下げするような後段の操作でも制御可能であることが分かります。<br>
+    I(t)は変調度と記載されていますが、FM合成ロジックの中で音色を決定づける重要な要素にも関わらず、モジュレータの音量に関するパラメータTLやDL1に対し取り得る値などの性質が示されていません。<br>
+    wcとwmはそれぞれキャリアーとモジュレーターの角周波数であり、ノート番号やピッチベンドなどによって決まる基本となる周波数と、周波数倍率を求めるパラメータMUL、デチューンにより求められます。</p>
+   <p>YM2151の資料ではwcをNc+Dc (ノート番号に伴う周波数+デチューン) と表していたり見た目わかりづらい印象があったためYM2608資料の式を採用しました。記号の違いはあっても、式の意味は変わりません。</p>
+  <h3><span id="TL">TL: キャリアーの最大音量、またはモジュールとしての変調度</span></h3>
+  <p>計算式の変調度I(t)が取り得る最大値として、モジュレーターのパラメータTLが出力波形に与える影響を探ります。<br>
+   まずVOPMで2つのオペレータM2とC2が直列に繋がるアルゴリズムを選択してM2の音量TLを変化させた様子を計測します。M1とC1は無効にします。M2とC2は同じ110Hz (ノートA0) を出力し、エンベロープによる音量変化がないようにします。VOPMのパラメータは<a href="img/VOPM_TL.jpg">こちら</a>。<br>
+   音色の変化を捉えるため、第1 (基音)、第2、第3倍音それぞれの音量を記録します。</p>
+  <p><div align="center"><img src="img/wavespectra.gif"><br>
+  図1: wavespectraで倍音スペクトルを表示している様子。(TL=16)</div></p>
+  <p>f1=110Hz、f2=220Hz、f3=330Hzにおける音量を計測します。当初wavespectraに表示された値を3倍音分*127段階ずつ転記していましたが、ミスが多く非効率なのでMAX for Live で測定結果をテキストで記録できるようにしました。<br>
+   計測用のパッチ (pfft~で呼ばれるサブパッチ) は<a href="img/FFTpatch.jpg">こんな感じ</a>です。窓にはBlackman、オーバーラップ数4を指定し、wavespectraの計測と一致することを確認済みです。以下は計測結果の一部です。</p>
+  <p><div align="center"><table id="num"><tr><th>TL</th><th>f1</th><th>f2</th><th>f3</th></tr>
+    <tr><td>127</td><td>-0.16</td><td>n/a</td><td>n/a</td></tr>
+    <tr><td>81</td><td>-0.16</td><td>n/a</td><td>n/a</td></tr>
+    <tr><td>80</td><td>-0.16</td><td>-38.64</td><td>n/a</td></tr>
+    <tr><td>72</td><td>-0.17</td><td>-32.62</td><td>-73.00</td></tr>
+    <tr><td>64</td><td>-0.19</td><td>-26.61</td><td>-59.69</td></tr>
+    <tr><td>56</td><td>-0.29</td><td>-20.61</td><td>-47.32</td></tr>
+    <tr><td>48</td><td>-0.67</td><td>-14.67</td><td>-35.31</td></tr>
+    <tr><td>40</td><td>-2.33</td><td>-8.99</td><td>-23.68</td></tr>
+    <tr><td>32</td><td>-13.21</td><td>-4.35</td><td>-13.41</td></tr>
+    <tr><td>24</td><td>-2.21</td><td>-4.60</td><td>-10.37</td></tr>
+    <tr><td>16</td><td>-6.04</td><td>-15.16</td><td>-5.24</td></tr>
+    <tr><td>8</td><td>-9.55</td><td>-25.18</td><td>-8.60</td></tr>
+    <tr><td>0</td><td>-12.85</td><td>-34.90</td><td>-12.46</td></tr></table>
+   表1: モジュレータのTLと倍音成分変化の抜粋。全ての結果は<a href="dat/TL.txt">こちら</a>。</div></p>
+  <p><div align="center"><img src="img/graph_TL.jpg"><br>図2: TL=80から0までの測定結果をGoogleスプレッドシートでグラフ化したところ。</div></p>
+  <p>TLが127から81の場合は倍音が発生しません。TLが80から73までの区間など、TLが変わってもモジュレータの出力が変わっていないと思われる区間があります。(グラフで階段状になっている箇所) これらの区間はキャリアーの音量としてTLを変えていった場合でも変化がありませんでした。実際のチップも同じ動作かは定かでありません。<br>
+   TL=54から0にかけては値が1変わるごとに相応の変化が見られます。<br>
+   また、TLが80から30辺りまでは倍音成分が連続して増加していますが、TL=25以降は基音がより減衰して第2、第3倍音の音量が大きくなったり、整数倍以外の倍音成分が現れ始め発振した様な状態になります。
+   キャリアーとモジュレータの周波数比が高くなるにつれて、モジュレーターのTLが大きくても (出力が小さくても) より発振しやすくなっていきます。</p>
+  <p>ここからMAXによる再現比較によりTLに対する変調度を求めていきます。本当は波形の計算式をベッセル級数に変換してTLに対するモジュレータの出力値を解きたかったのですが、頓挫しました。</p>
+  <p><div align="center"><img src="img/FMpatch1.jpg"><br>図3: 2オペレータ直列のFM合成を模したMAXパッチ</div></p>
+  <p>変調度はsin関数の位相に係る変数であることから最大値が2PIになると予想したところ、TL=80の場合とモジュレーターの出力 (図3中のlevel) が4PI - 54.25dBの場合とほぼ一致することが分かりました。<br>
+   YM2151アプリケーションマニュアルにはTLは0.75dB刻みであることが明記されているため、モジュレータの出力の最大値は4PI * (-0.75 * TL + 5.75)dB で求められます。</p>
+    <p><div align="center"><table id="num">
+    <tr><th colspan=4>VOPM</th><th colspan=4>MAX for Live</th></tr>
+    <tr><th>TL</th><th>f1</th><th>f2</th><th>f3</th><th>level<br>(dB)</th><th>f1</th><th>f2</th><th>f3</th></tr>
+    <tr><td>80</td><td>-0.16</td><td>-38.64</td><td>n/a</td><td>-54.25</td><td>-0.08</td><td>-38.60</td><td>-83.28</td></tr>
+    <tr><td>72</td><td>-0.17</td><td>-32.62</td><td>-73.00</td><td>-48.25</td><td>-0.08</td><td>-32.60</td><td>-71.29</td></tr>
+    <tr><td>64</td><td>-0.19</td><td>-26.61</td><td>-59.69</td><td>-42.25</td><td>-0.11</td><td>-26.60</td><td>-59.30</td></tr>
+    <tr><td>56</td><td>-0.29</td><td>-20.61</td><td>-47.32</td><td>-36.25</td><td>-0.20</td><td>-20.62</td><td>-47.32</td></tr>
+    <tr><td>48</td><td>-0.67</td><td>-14.67</td><td>-35.31</td><td>-30.25</td><td>-0.57</td><td>-14.70</td><td>-35.43</td></tr>
+    <tr><td>40</td><td>-2.33</td><td>-8.99</td><td>-23.68</td><td>-24.25</td><td>-2.16</td><td>-9.03</td><td>-23.83</td></tr>
+    <tr><td>32</td><td>-13.21</td><td>-4.35</td><td>-13.41</td><td>-18.25</td><td>-12.13</td><td>-4.35</td><td>-13.52</td></tr>
+    <tr><td>24</td><td>-2.21</td><td>-4.60</td><td>-10.37</td><td>-12.25</td><td>-2.37</td><td>-4.26</td><td>-9.93</td></tr>
+    <tr><td>16</td><td>-6.04</td><td>-15.16</td><td>-5.24</td><td>-6.25</td><td>-7.08</td><td>-15.56</td><td>-5.05</td></tr>
+    <tr><td>8</td><td>-9.55</td><td>-25.18</td><td>-8.60</td><td>-0.25</td><td>-13.26</td><td>-27.97</td><td>-10.25</td></tr>
+    <tr><td>0</td><td>-12.85</td><td>-34.90</td><td>-12.46</td><td>5.75</td><td>-35.84</td><td>-52.61</td><td>-23.95</td></tr>
+    </table>表2: モジュレータのlevelと倍音成分変化の抜粋をVOPMの結果と比較。MAX側の全ての結果は<a href="dat/level.txt">こちら</a>。</div></p>
+  <p><div align="center"><img src="img/graph_level.jpg"><br>MAXでの測定結果をグラフ化したところ。</div></p>
+  <div align="center">～つづく～</div>
+  <hr>
+  <p><a href="index.html">戻る</a></p>
+ </body>
+</html>

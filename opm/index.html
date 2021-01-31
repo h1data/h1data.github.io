@@ -1,0 +1,58 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="opm.css" type="text/css">
+  <title>to understand and emulate the OPM sound</title>
+ </head>
+ <body>
+  <h1>OPMを知る</h1>
+  <!-- <p>最終更新: 2019/2/3</p> -->
+  <h2>目次</h2>
+  <p><ul>
+   <li><a href="#introduction">はじめに</a></li>
+   <li><a href="./vopm.html">VOPMの測定</a></li>
+    <ul>
+     <li><a href="./vopm.html#FMformula">FM合成の計算式</a></li>
+     <li><a href="./vopm.html#TL">TL: 最大音量または変調度</a></li>
+     (以下準備中)
+     <li>DL1: サスティンにおける音量または変調度</li>
+     <li>FL: フィードバックレベル</li>
+     <li>DT1、DT2: デチューン</li>
+     <li>エンベロープについて</li>
+     <li>MAXによる再現例</li>
+    </ul>
+   <li><a href="#reference">参考資料</a></li>
+   <li><a href="#software">使用ソフトウェア</a></li>
+   <li><a href="#disclaimer">免責事項</a></li>
+  </ul></p>
+  <h2><span id="introduction">はじめに</span></h2>
+  <p>Sam氏作のフリーVSTi、<a href="http://www.geocities.jp/sam_kb/VOPM/">VOPM</a>は往年のFM音源チップYM2151の音色をお手軽かつ完全に再現できる夢のプラグインです。PPSE部改造版の<a href="http://picopicose.com/software.html">VOPMex</a>が後継に挙げられるものの、オリジナルのVOPMは2013年に開発停止が宣言され、VST規格を制定しているSteinbergからは<a href="https://japan.steinberg.net/jp/news_events/news_list/detail/article/vst-2-4747.html">VST2プラグイン自体の段階的サポート停止が予告される</a>など、今後のDAW環境で使用できなくなってしまうことが考えられます。<br>
+   なお、上記リンク先のVOPMホームページは<a href="https://info-geocities.yahoo.co.jp/close/">geocitiesサービスの終了</a>により2019年3月末には閲覧できなくなる予定です。</p>
+  <p>フィルタによる減算方式のシンセサイザーと比べ難解な印象があるFM音源ですが、YAMAHA Reface DX など4オペレータFM音源の復刻版が登場するなど、独特の倍音が乗った音色が評価され続けていることが伺えます。<br>
+   古き良き音色を残していけるよう、ここではAbleton Live付属のMAX for LiveやOperatorを用いて再現・比較検証を行います。筆者やweb検索の気まぐれで訪れた方にとって、FM合成の勘所やYAMAHA製FM音源特有の仕様を知る助けになれば幸いです。</p>
+  <h2><span id="reference">参考資料</span></h2>
+   <ul>
+    <li>YM2608 OPNA アプリケーションマニュアル</li>
+    <li>YM2151 Application Manual</li>
+    <li>Ableton Liveインストゥルメントリファレンス</li>
+   </ul>
+  <h2><span id ="software">使用ソフトウェア</span></h2>
+  <p><ul>
+   <li>VOPM version 0.17</li>
+   <li>Ableton Live 9 Suite (32bit)</li>
+   <li>MAX 6</li>
+   <li>WaveSpectra Ver. 1.51</li>
+   <li>SoundEngine Free ver.4.41</li>
+  </ul></p>
+  <h2><span id="disclaimer">免責事項</span></h2>
+   <ul>
+    <li>各音声サンプルについて音量を調整しておりますが非常に倍音成分が強い音色が含まれるため、大音量での再生は避けてください。</li>
+    <li>目次のとおり内容を追加していく予定ですが、予告無く内容や構成を変更する場合があります。</li>
+    <li>各測定は可能な限り聴覚に頼らず機械的に行っていますが、保証はありません。ソフトウェアのバージョン等により結果が変わる可能性もあります。</li>
+    <li>文中の商品名・各製品名は各社の登録商標または商標の場合があります。</li>
+   </ul>
+ <hr>
+ <p><a href="../index.html">戻る</a></p>
+ </body>
+</html>
