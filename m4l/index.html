@@ -25,7 +25,7 @@
     if the device works or doesn't on macOS, or has any inconveniences.</p>
   <p>Max やAbleton Live をお持ちでない場合でも、<a href="https://www.ableton.com/ja/trial/">こちら</a>からLive Suite のデモ版をダウンロードできます。<br>
     なんと90日間無料でMax for Live を含む全ての機能が使えます!! (2020年4月時点)<br>
-    Ableton Live Suite 9.7.7 / 10.1.25、MAX 6.1.7 / 7.3.5 / 8.1.7、Windows 10 (1909) でのみ正常動作を確認しています。<br>
+    Ableton Live Suite 9.7.7 / 10.1.25、MAX 6.1.7 / 7.3.5 / 8.1.8、Windows 10 (20H2) でのみ正常動作を確認しています。<br>
     macOSでの動作は確認していないため、動作状況や問題点について<a href="https://maxforlive.com/profile/user/h1data">コメント</a>か<a href="https://twitter.com/tky4444">何か</a>でお知らせ頂けると助かります。</p>
   <hr>
   <h2><span id="altdrum">ALT-Synthdrum</span></h2>
@@ -210,27 +210,41 @@
   </div>
   <hr>
   <h2><span id="bounce">bouncing notes</span></h2>
-  <p><img src="bouncingNotes.jpg"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br>
+  <p><img src="bouncingNotes.png"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br>
     Download at <a href="https://maxforlive.com/library/device/6075/bouncing-notes">maxforlive.com</a>
-    (the last update: March 23, 2020 / version 1.0.4)</p>
+    (the last update: February 23, 2021 / version 1.1.0)</p>
   <p>While note on, generates repeating notes like bouncing table-tennis ball with dynamic display animation.<br>
     Simulates bounces from the levitation-ish on the Moon to fierce conditions of 60G.<br>
-    And available in polyphonic!</p>
+    And available in polyphonic and inverse mode!</p>
   <input id="bnotes-issues-en" class="list-check" type="checkbox">
   <label class="list-label" for="bnotes-issues-en">Known issues</label>
   <div class="list-content">
     <ul>
-      <li>While notes playing, changing some parameters do not effect until the next bound, not in real-time.<br>
+      <li>While notes playing, changing some parameters does not effect until the next bound, not in real-time.<br>
         It is necessary to change most of the patch code (the way to manage by CPU time such as Note Echo in Max for Live Essentials) for correcting this issue,<br>
-        however, no one might want to manipulate the gravity in real-time.</li>
+        however, no one might want to manipulate gravity in real-time.</li>
       <li>Playing many notes at a time causes some CPU usage. (might be caused by the instruments after this device)<br>
-        To disable DISP switch may reduce the CPU usage. Future updates may introduce light display mode without sprites.</li>
+        Disabling DISP switch may reduce CPU usage. Future updates may introduce light display mode without sprites.</li>
+      <li>Bouncing balls might be not displayed properly when inverse mode.
+        Because the display supposed the maximum note velocity is 127, however,
+        the velocity of balls increases without limit when inverse mode.</li>
     </ul>
   </div>
   <input id="bnotes-releases-en" class="list-check" type="checkbox">
   <label class="list-label" for="bnotes-releases-en">Release notes</label>
   <div class="list-content">
     <ul>
+      <li>Changes in version 1.1.0 (February 23, 2021)</li>
+      <ul>
+        <li>Added the inverted bouncing feature at last! The bouncing is inverted when Inv. button is on.<br>
+          Each time pressing Inv. button makes undo histories.
+          So it is recommended to automate Inv. button when it is toggled repeatedly.</li>
+        <li>Added Velocity parameter to adjust the initial velocity (of balls).<br>
+          Setting the Velocity value low works effectively with the inverted mode.<br>
+          Also adjusted the UI including other parameter's font.</li>
+        <li>These changes do not affect Live sets which use the device of previous versions.</li>
+        <li>Changed notation method of the version to semantic versioning.</li>
+      </ul>
       <li>Changes in version 1.04 (March 23, 2020)</li>
       <ul>
         <li>Fixed the display problem in Max 8 by changing HOLD and DISP button to default display mode from label display mode.</li>
@@ -243,7 +257,7 @@
   <hr width="97%">
   <p>ノートオンの間、ピンポン玉が跳ねるようにノートが生成されます。視覚的に効果が分かるようアニメーション窓が付いています。<br>
     月面の浮遊感から苛烈な60G環境までの跳ね返りをシミュレートできます。<br>
-    複数ノートの処理に対応しています。</p>
+    複数ノートの処理や、反転モードに対応しています。</p>
   <input id="bnotes-issues-jp" class="list-check" type="checkbox">
   <label class="list-label" for="bnotes-issues-jp">既知の問題</label>
   <div class="list-content">
@@ -253,12 +267,22 @@
         する必要がありますが、<br>リアルタイムで重力を正確に変えていきたい、といった人は居らっしゃらないと思っています。</li>
       <li>一度に大量のノートを演奏するとCPU使用率が上がることがあります。(後段のインストゥルメントによる場合もあります)<br>
         DISPスイッチをオフにすることでCPU使用率を抑えられる場合があります。今後の更新でスプライト描画を行わない軽い表示モードを付けるかも知れません。
+      <li>反転モードでボールがうまく描画されない場合があります。これは、元々ノートベロシティの最大を127と想定していましたが、反転モードでは際限なくベロシティが上がっていくためです。</li>
     </ul>
   </div>
   <input id="bnotes-releases-jp" class="list-check" type="checkbox">
   <label class="list-label" for="bnotes-releases-jp">更新履歴</label>
   <div class="list-content">
     <ul>
+      <li>Version 1.1.0 の変更点 (2021/2/23)</li>
+      <ul>
+        <li>ついに、反転バウンドモードを追加しました。Inv.ボタンがオンの場合、バウンドが反転します。<br>
+          Inv.ボタンは押す度に元に戻す履歴を作成するため、何度も切り替える場合はオートメーションへの設定をお勧めします。</li>
+        <li>初速度を調整できるVelocityパラメーターを追加しました。反転モードの場合Velocityの値を小さくすると効果的です。<br>
+          また、他のパラメーターのフォントを含めUIを調整しました。</li>
+        <li>これらの変更は以前のバージョンのデバイスを使ったLiveセットには影響しません。</li>
+        <li>バージョン表記をセマンティックバージョニングにしました。</li>
+      </ul>
       <li>Version 1.04 の変更点 (2020/3/23)</li>
       <ul>
         <li>HOLDおよびDISPボタンの表示形式をlabelからdefaultに変更し、Max 8 でうまく表示されない問題を修正しました。</li>
