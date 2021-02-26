@@ -361,7 +361,7 @@
   <label class="list-label" for="afmacro-issues-en">Known issues</label>
   <div class="list-content">
     <ul>
-      <li>Sliders before the position of loop start look dark and inactive. Those are actually active by hitting Resync button.</li>
+      <li>Sliders before the position of loop start look dark and inactive. Those are actually active by hitting Resync button or receiving MIDI notes. (able to receive MIDI notes only Live 11.0 or later)</li>
       <li>The clock rate does not affect completely perfect to the actual rate due to internal buffer of modulated devices and Live itself. (10 to 20+ samples in sampling rate = 44.1kHz)</li>
       <li>Might not work as stepwise modulation for parameters such as output volumes which continuously vary in a few mill seconds by changing values.</li>
       <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br>
@@ -375,12 +375,20 @@
   <label class="list-label" for="afmacro-releases-en">Release notes</label>
   <div class="list-content">
     <ul>
+      <li>Changes in version 1.3.0 (February 26, 2021)</li>
+      <ul>
+        <li>Now able to route from 'MIDI To'. (only for Live 11.0 or later) The modulation restarts when the device receives note on like hitting the Resync button.</li>
+        <li>Fixed an issue when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</li>
+        <li>Fixed an issue when mapping parameter might not work with certain conditions.</li>
+        <li>Changed the automation parameter list order. This change does not affect Live sets which use previous versions.</li>
+      </ul>
       <li>Changes in version 1.2.1 (December 13, 2020)</li>
       <ul>
         <li>Added Live standard loop selector which can adjust start position of the loop. Loop start/end position is also able to be automated.<br/>
           The values of sliders before the loop start position only work when hitting Resync button.</li>
         <li>The phase of the master clock restarts by hitting Resync button thus the first frame modulates in proper duration.</li>
-        <li>Fixed the issues when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</li>
+        <li><s>Fixed an issue when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</s><br>
+          Not fixed in this version due to a mistake. So sorry for the inconvenience.</li>
       </ul>
       <li>Version 1.0.0 : the first release (Nov 8, 2020)</li>
     </ul>
@@ -399,7 +407,7 @@
   <label class="list-label" for="afmacro-issues-jp">既知の問題</label>
   <div class="list-content">
     <ul>
-      <li>ループ開始地点より前のスライダーは暗く有効でないように見えますが、実際はResyncボタンを押した際に効果を発揮しています。</li>
+      <li>ループ開始地点より前のスライダーは暗く有効でないように見えますが、実際はResyncボタンを押すか (Live 11.0以降で) MIDIノートを受信した際に効果を発揮します。</li>
       <li>Clockの周期は、モジュレーションさせるデバイスやLive自体の内部バッファによって、実際の周期とは完全に一致しません。(サンプリング周波数44.1kHzで10～20数サンプル程の誤差)</li>
       <li>音量など、値が変化してから数ミリ秒かけて連続的に動作するパラメーターでは、段階的に変化する効果が得られない場合があります。</li>
       <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br>
@@ -413,12 +421,20 @@
   <label class="list-label" for="afmacro-releases-jp">更新履歴</label>
   <div class="list-content">
     <ul>
+      <li>Version 1.3.0 の変更点 (2021/2/26)</li>
+      <ul>
+        <li>デバイスをMIDIトラックのMIDI出力先 (MIDI To) に指定できるよう対応しました。(Live 11.0以降のみ) ノートオン受信時に、Resyncボタンを押した時の様にモジュレーションが最初に戻るようになります。</li>
+        <li>ループ開始・終了地点やオートメーションが設定されているスライダー以外のスライダーの値を変更するとオートメーションが取り消されてしまう場合がある問題を修正しました。</li>
+        <li>状況によってMapボタン押下してパラメーターを選択しても指定されない場合がある問題を修正しました。</li>
+        <li>オートメーションの表示順を見直しました。この変更は以前のバージョンを使用したLiveセットには影響しません。</li>
+      </ul>
       <li>Version 1.2.1 の変更点 (2020/12/13)</li>
       <ul>
         <li>Live標準のループセレクターを追加し、ループ開始地点を指定できるようになりました。ループの開始・終了地点にもオートメーションを設定できます。<br/>
           ループ開始地点より前のスライダーは、Resyncボタンを押したときにのみ効果があります。</li>
         <li>Resyncボタンを押した際にマスタークロックの位相を初期化することで、最初のフレームが正しい長さでモジュレーションされるようになりました。</li>
-        <li>ループ開始・終了地点やオートメーションが設定されているスライダー以外のスライダーの値を変更するとオートメーションが取り消されてしまう場合がある問題を修正しました。</li>
+        <li><s>ループ開始・終了地点やオートメーションが設定されているスライダー以外のスライダーの値を変更するとオートメーションが取り消されてしまう場合がある問題を修正しました。</s><br>
+          ミスによりこのバージョンでは改修されておりませんでした。ご不便おかけし誠に申し訳ございません。</li>
       </ul>
       <li>Version 1.0.0 : 初版 (2020/11/8)</li>
     </ul>
