@@ -349,8 +349,8 @@
   <h2><span id="afmacro">Audio Frame Macro</span></h2>
   <p><img src="afmacro.png"><br>
     Download at <a href="https://maxforlive.com/library/device/6678/audio-frame-macro">maxforlive.com</a>
-    (the last update: February 26, 2021 / version 1.3.0)</p>
-  <p>Audio effect device to modulate parameters in low-resolution and PAL/NTSC like interlace frame rates.<br>
+    (the last update: May 11, 2021 / version 1.3.1)</p>
+  <p>Audio effect device to modulate parameters in integer values and PAL/NTSC like interlace frame rates.<br>
     Deeply influenced by tracker software and chiptune plugins.</p>
   <p>Features
     <ul>
@@ -363,12 +363,10 @@
   <label class="list-label" for="afmacro-issues-en">Known issues</label>
   <div class="list-content">
     <ul>
-      <li>Sliders before the position of loop start look dark and inactive. Those are actually active by hitting Resync button or receiving MIDI notes. (able to receive MIDI notes only Live 11.0 or later)</li>
       <li>The clock rate does not affect completely perfect to the actual rate due to internal buffer of modulated devices and Live itself. (10 to 20+ samples in sampling rate = 44.1kHz)</li>
       <li>Might not work as stepwise modulation for parameters such as output volumes which continuously vary in a few mill seconds by changing values.</li>
       <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br>
         Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
-      <li>The values below sliders cannot display properly when the value is -100 or less. It is not assumed to use with values under -64.</li>
       <li>Resync button can be automated, however, pressing the button always makes undo histories as a side effect.</li>
       <li>The values below sliders might exceed the input range, however, he actual values in modulation are limited by the input range.</li>
     </ul>
@@ -377,6 +375,11 @@
   <label class="list-label" for="afmacro-releases-en">Release notes</label>
   <div class="list-content">
     <ul>
+      <li>Changes in version 1.3.1 (May 11, 2021)</li>
+      <ul>
+        <li>Fixed an issue when sliders before the position of loop start look dark and inactive.</li>
+        <li>Fixed an issue when the values below sliders cannot display properly when the value is -100 or less.</li>
+      </ul>
       <li>Changes in version 1.3.0 (February 26, 2021)</li>
       <ul>
         <li>Now able to route from 'MIDI To'. (only for Live 11.0 or later) The modulation restarts when the device receives note on like hitting the Resync button.</li>
@@ -409,12 +412,10 @@
   <label class="list-label" for="afmacro-issues-jp">既知の問題</label>
   <div class="list-content">
     <ul>
-      <li>ループ開始地点より前のスライダーは暗く有効でないように見えますが、実際はResyncボタンを押すか (Live 11.0以降で) MIDIノートを受信した際に効果を発揮します。</li>
       <li>Clockの周期は、モジュレーションさせるデバイスやLive自体の内部バッファによって、実際の周期とは完全に一致しません。(サンプリング周波数44.1kHzで10～20数サンプル程の誤差)</li>
       <li>音量など、値が変化してから数ミリ秒かけて連続的に動作するパラメーターでは、段階的に変化する効果が得られない場合があります。</li>
       <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br>
         もし128を超える値が持てるデバイス、特にLive標準のデバイスがあればお知らせください。</li>
-      <li>スライダーの下に表示される数値について、-100以下の場合は正しく表示されません。(実際-64以下の使用はあまり想定していません)</li>
       <li>Resyncボタンにもオートメーションが設定可能ですが、副作用としてボタンを押すたびに元に戻す履歴が作成されます。</li>
       <li>スライダーの下に表示される数値はInput Rangeで指定された範囲を超えることがありますが、モジュレーションに用いられる値はInput Range の範囲に絞られます。</li>
     </ul>
@@ -423,6 +424,11 @@
   <label class="list-label" for="afmacro-releases-jp">更新履歴</label>
   <div class="list-content">
     <ul>
+      <li>Version 1.3.1 の変更点 (2021/5/11)</li>
+      <ul>
+        <li>ループ開始地点より前のスライダーが暗く表示され有効でないように見える問題を修正しました。</li>
+        <li>スライダーの下に表示される数値について、-100以下の場合に正しく表示されない問題を修正しました。</li>
+      </ul>
       <li>Version 1.3.0 の変更点 (2021/2/26)</li>
       <ul>
         <li>デバイスをMIDIトラックのMIDI出力先 (MIDI To) に指定できるよう対応しました。(Live 11.0以降のみ) ノートオン受信時に、Resyncボタンを押した時の様にモジュレーションが最初に戻るようになります。</li>
@@ -445,8 +451,8 @@
   <h2><span id="mfmacro">MIDI Frame Macro</span></h2>
   <p><img src="mfmacro.png"><br>
     Download at <a href="https://maxforlive.com/library/device/6763">maxforlive.com</a>
-    (the last update: February 27, 2021 / version 1.0.2)</p>
-  <p>MIDI effect device to modulate parameters in low-resolution and PAL/NTSC like interlace frame rates.<br>
+    (the last update: May 11, 2021 / version 1.3.1)</p>
+  <p>MIDI effect device to modulate parameters in integer values and PAL/NTSC like interlace frame rates.<br>
    Just a MIDI version of Audio Frame Macro.</p>
   <p>Features
     <ul>
@@ -472,6 +478,12 @@
   <label class="list-label" for="mfmacro-releases-en">Release notes</label>
   <div class="list-content">
     <ul>
+      <li>Changes in version 1.3.1 (May 11, 2021)</li>
+      <ul>
+        <li>Fixed an issue when sliders before the position of loop start look dark and inactive.</li>
+        <li>Fixed an issue when the values below sliders cannot display properly when the value is -100 or less.</li>
+        <li>The version number is adapted to AudioFrameMacro, the derived origin device.</li>
+      </ul>
       <li>Changes in version 1.0.2 (February 27, 2021)</li>
       <ul>
         <li>Fixed an issue when mapping parameter might not work with certain conditions.</li>
@@ -496,20 +508,24 @@
   <label class="list-label" for="mfmacro-issues-jp">既知の問題</label>
   <div class="list-content">
     <ul>
-      <li>ループ開始地点より前のスライダーは暗く有効でないように見えますが、実際はノートオンの度に効果を発揮しています。</li>
       <li>多くのインストゥルメントデバイスは、クリップノイズを発生させないようにノートオンから数ミリ秒遅れて発音します。そのため最初の数フレームの効果は短くなります。<br>
         ループ開始地点より前のフレームか、Cycle/Stepの値を増やすことでアタック時の効果を明確になります。</li>
       <li>Clockの周期は、変化させるデバイスやLive自体の内部バッファによって、実際の変化周期とは完全に一致しません。</li>
       <li>数ミリ秒かけて連続的に変化するパラメーターに対しては、段階的に変化する効果が得られない場合があります。</li>
       <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br>
         もし128を超える値が持てるデバイス、特にLiveのビルトインデバイスがあればお知らせください。</li>
-      <li>スライダーの下に表示される数値について、-100以下の場合は正しく表示されません。(実際-64以下の使用はあまり想定していません)</li>
     </ul>
   </div>
   <input id="mfmacro-releases-jp" class="list-check" type="checkbox">
   <label class="list-label" for="mfmacro-releases-jp">更新履歴</label>
   <div class="list-content">
     <ul>
+      <li>Version 1.3.1 の変更点 (2021/5/11)</li>
+      <ul>
+        <li>ループ開始地点より前のスライダーが暗く表示され有効でないように見える問題を修正しました。</li>
+        <li>スライダーの下に表示される数値について、-100以下の場合に正しく表示されない問題を修正しました。</li>
+        <li>バージョン番号を派生元デバイスのAudioFrameMacroに合わせました。</li>
+      </ul>
       <li>Version 1.0.2 の変更点 (2021/2/27)</li>
       <ul>
         <li>状況によってMapボタン押下してパラメーターを選択しても指定されない場合がある問題を修正しました。</li>
