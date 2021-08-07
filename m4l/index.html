@@ -17,17 +17,23 @@
       <li><a href="#afmacro">Audio Frame Macro</a>: audio effect (LFO-like parameter modulator)</li>
       <li><a href="#mfmacro">MIDI Frame Macro</a>: midi effect (LFO-like parameter modulator)</li>
       <li><a href="#retronome">Retro-nome</a>: audio effect (visualization)</li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1MyoOs8OYtg80k8z8LJqwr4VtPTgd1pCrn9j5E1dvnZQ">Ableton / Max for Live color settings</a> (color cheat sheet for developers)</li>
+      <li><a href="#audioAdsr">Audio ADSR</a>: audio effect</li>
+      <li><a href="#midirouter">MIDI Router</a>: audio effect (utility device)</li>
+    </ul>
+    <ul>
+      For the M4L developers
+      <li><a href="https://github.com/h1data/M4L-ioRouting-js">ioRouting.js</a>: Javascript routing Audio or MIDI I/O</li>
+      <li><a href="https://docs.google.com/spreadsheets/d/1MyoOs8OYtg80k8z8LJqwr4VtPTgd1pCrn9j5E1dvnZQ">Ableton / Max for Live color settings</a> (color cheat sheet)</li>
     </ul>
   </p>
   <p>Even if you don't own MAX or Ableton Live, you can download the demo version of Live Suite <a href="https://www.ableton.com/trial/">here</a>.<br>
     It's free for 90 days with all functions including Max for Live!! (as of April 2020)<br>
-    Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14, MAX 6.1.7 / 7.3.5 / 8.1.3 on Windows 10 (1909).<br>
+    Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.0.5, MAX 6.1.7 / 7.3.5 / 8.1.11 on Windows 10 (1909).<br>
     Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/tky4444">notify the author</a>
     if the device works or doesn't on macOS, or has any inconveniences.</p>
   <p>Max やAbleton Live をお持ちでない場合でも、<a href="https://www.ableton.com/ja/trial/">こちら</a>からLive Suite のデモ版をダウンロードできます。<br>
     なんと90日間無料でMax for Live を含む全ての機能が使えます!! (2020年4月時点)<br>
-    Ableton Live Suite 9.7.7 / 10.1.25、MAX 6.1.7 / 7.3.5 / 8.1.8、Windows 10 (20H2) でのみ正常動作を確認しています。<br>
+    Ableton Live Suite 9.7.7 / 10.1.25 / 11.0.5、MAX 6.1.7 / 7.3.5 / 8.1.11、Windows 10 (20H2) でのみ正常動作を確認しています。<br>
     macOSでの動作は確認していないため、動作状況や問題点について<a href="https://maxforlive.com/profile/user/h1data">コメント</a>か<a href="https://twitter.com/tky4444">何か</a>でお知らせ頂けると助かります。</p>
   <hr>
   <h2><span id="altdrum">ALT-Synthdrum</span></h2>
@@ -537,7 +543,7 @@
       <li>Version 1.0.0 : 初版 (2020/12/6)</li>
     </ul>
   </div>
-  <hr> <h2><span id="retronome">Retro-nome</span></h2>
+  <hr><h2><span id="retronome">Retro-nome</span></h2>
   <p><img src="retronome.png"><br>
     Download at <a href="https://maxforlive.com/library/device/6723">maxforlive.com</a>
     (the last update: November 22, 2020 / version 1.0.0)</p>
@@ -552,10 +558,56 @@
   <hr width="97%">
   <p>テンポ同期を支援する視覚エフェクトです。変更できるパラメーターはありません。</p>
   <input id="retronome-issues-jp" class="list-check" type="checkbox">
-  <label class="list-label" for="retronome-issues-jp">Precautions for use</label>
+  <label class="list-label" for="retronome-issues-jp">使用上の注意</label>
   <div class="list-content">
     <ul>
       <li>1万小節以降は正しく表示されませんが、何か問題でも?</li>
+    </ul>
+  </div>
+  <hr><h2><span id="audioAdsr">Audio ADSR</span></h2>
+  <p><img src="AudioADSR.png"><br>
+    Download at <a href="https://maxforlive.com/library/device/7508">maxforlive.com</a>
+    (the last update: August 7, 2021 / version 1.0.0)</p>
+  <p>A super simple ADSR enveloper for audio tracks.<br>
+    Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
+  <input id="audioAdsr-issues-en" class="list-check" type="checkbox" checked>
+  <label class="list-label" for="audioAdsr-issues-en">Known issues</label>
+  <div class="list-content">
+    <ul>
+      <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
+    </ul>
+  </div>
+  <hr width="97%">
+  <p>オーディオトラックで使用できる、超シンプルなADSRエンベローパーです。<br>
+    Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
+  <input id="audioAdsr-issues-jp" class="list-check" type="checkbox" checked>
+  <label class="list-label" for="audioAdsr-issues-jp">既知の問題</label>
+  <div class="list-content">
+    <ul>
+      <li>MIDI入力のタイプやチャンネルを続けて変更し元に戻した際、プルダウンリストが余計に元に戻ってしまう場合があります。</li>
+    </ul>
+  </div>
+  <hr><h2><span id="midirouter">MIDI Router</span></h2>
+  <p><img src="MidiRouter.png"><br>
+    Download at <a href="https://maxforlive.com/library/device/7509">maxforlive.com</a>
+    (the last update: August 7, 2021 / version 1.0.0)</p>
+  <p>Routing MIDI I/O in audio tracks for audio effect devices or plugins which have MIDI input.<br>
+    Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
+  <input id="midirouter-issues-en" class="list-check" type="checkbox" checked>
+  <label class="list-label" for="midirouter-issues-en">Known issues</label>
+  <div class="list-content">
+    <ul>
+      <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
+    </ul>
+  </div>
+  <hr width="97%">
+  <p>オーディオトラック上でオーディオエフェクトデバイスやプラグインのMIDIルーティングを行えるデバイスです。<br>
+    Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
+  <input id="midirouter-issues-jp" class="list-check" type="checkbox" checked>
+  <label class="list-label" for="midirouter-issues-jp">既知の問題</label>
+  <div class="list-content">
+    <ul>
+      <li>MIDI入力のタイプやチャンネルを続けて変更し元に戻した際、プルダウンリストが余計に元に戻ってしまう場合があります。</li>
     </ul>
   </div>
   <hr>
