@@ -311,22 +311,37 @@
     Suitable for bending down synth percussion sounds in drum rack.<br>
     Based on the device <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">"PitchW ADSR" by LAEX</a> with additional features below.</p>
   <ul>
+    <li>Adjustable pitch bend range in 14bit-precise values (-8192 to 8191)</li>
     <li>Can adjust delay time to start pitch bend curve from note on.</li>
-    <li>Adjustable pitch bend range in 14bit-precise value (-8192 to 8191)</li>
     <li>The pitch bend curve can be linear, exponential, or logarithmic.</li>
-    <li>Dynamic visual display which represents pitch bend value by js and LCD object.</li>
+    <li>Dynamic visual display which represents pitch bend value and adjusts the range of the pitch bend curve.</li>
   </ul>
   <input id="pitchwc-issues-en" class="list-check" type="checkbox">
-  <label class="list-label" for="pitchwc-issues-en">Precautions for use</label>
+  <label class="list-label" for="pitchwc-issues-en">Precautions for use and known issues</label>
   <div class="list-content">
     <ul>
       <li>Not available for up-down curves like ADSR. If you want to, please check <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">the original</a>.</li>
-      <li>Can not change the range by clicking the LCD...for now.</li>
       <li>The device ignores all incoming pitch bend messages.</li>
       <li>The device outputs pitch bend messages every 1 msec.<br>
         If the time interval of messages is too short for such as hardware midi instruments,<br>
-        you can adjust the interval by modifying the second attribute of<br>
-        the line object in '---curveGenerator' sub-patch.</li> 
+        you can adjust by the 'Interval' value.</li> 
+      <li>With Shift+drag, You can adjust the range finely, however, the position of mouse pointer exceeds the display area of the device.</li>
+      <li>In Max 6, 'To' value seems '0' when the device was added to MIDI track. It works as -8192 as the indicator shows.</li>
+      </ul>
+  </div>
+  <input id="pitchwc-releases-en" class="list-check" type="checkbox">
+  <label class="list-label" for="pitchwc-releases-en">Release notes</label>
+  <div class="list-content">
+    <ul>
+      <li>Changes in version 1.2.0 (October 30, 2021)</li>
+      <ul>
+        <li>Now you can change the range of the pitch bend curve by dragging bracket shapes in the pitch bend indicator. Shift+drag can adjust finely.</li>
+        <li>Added "Interval" number box to adjust the interval of pitch bend MIDI messages.</li>
+        <li>Now pitch bend curve stops when the device was inactivated and does not continue after activation.</li>
+        <li>And some UI tweaks.</li>
+        <li>These changes do not affect Live sets using the previous version.</li>
+      </ul>
+      <li>Version 1.0.0 : the first release (May 27, 2020)</li>
     </ul>
   </div>
   <hr width="97%">
@@ -337,21 +352,35 @@
     <li>ノートオンからピッチベンドカーブ開始までの遅延時間を設定できます。</li>
     <li>ピッチベンド範囲を14bit精度の値で指定できます。(-8192から8191)</li>
     <li>ピッチベンド変化は線形だけでなく指数および対数カーブにも対応しています。</li>
-    <li>lcdとjsオブジェクトを利用した動的なピッチベンド値表示窓が付いています。</li>
+    <li>左側の窓はピッチベンド値を表示し、上下の枠をドラッグすることでピッチベンド範囲を調整できます。</li>
   </ul>
   <input id="pitchwc-issues-jp" class="list-check" type="checkbox">
-  <label class="list-label" for="pitchwc-issues-jp">使用上の注意</label>
+  <label class="list-label" for="pitchwc-issues-jp">使用上の注意と既知の問題</label>
   <div class="list-content">
     <ul>
       <li>ADSRの様に上がってまた戻るカーブには対応していません。<a href="https://maxforlive.com/library/device/3904/pitchw-adsr">オリジナル</a>を試してみてください。</li>
-      <li>LCD表示はクリックしても範囲の調整はできません。今のところ‥‥。</li>
       <li>入力されたピッチベンドメッセージはすべて無視されます。</li>
-      <li>ピッチベンドメッセージを1ミリ秒ごとに出力します。<br>
-        ハードウェアのMIDI機器等に対して、もしメッセージの間隔が短すぎる場合は<br>
-        「---curveGenerator」内のlineオブジェクト第2引数で間隔を調整できます。</li>
+      <li>ピッチベンドメッセージは1ミリ秒ごとに出力されます。<br>
+        ハードウェアのMIDI機器等に対して、もしメッセージの間隔が短すぎる場合は「Interval」でピッチベンドメッセージの送信感覚を調整できます。</li>
+      <li>Shift+ドラッグでピッチベンドカーブの範囲を微調整することができますが、マウスポインタの位置はデバイスの表示範囲に留まりません。</li>        
+      <li>Max 6では、デバイスをMIDIトラックに新規追加した際に「To」の値が0で表示されますが実際には表示窓のとおり-8192として動作します。</li>
     </ul>
   </div>
-  <hr>
+  <input id="pitchwc-releases-jp" class="list-check" type="checkbox">
+  <label class="list-label" for="pitchwc-releases-jp">更新履歴</label>
+  <div class="list-content">
+    <ul>
+      <li>Version 1.2.0 の変更点 (2021/10/30)</li>
+      <ul>
+        <li>ピッチベンド表示窓の上下の枠をドラッグすることで、ピッチベンドカーブの範囲を指定できるようになりました。Shift+ドラッグで微調整も可能です。</li>
+        <li>「Interval」でピッチベンドメッセージの送信感覚を調整できるようになりました。</li>
+        <li>デバイスが非アクティブになった時にピッチベンドカーブを停止し、再度アクティブになったあとカーブが継続しないようにしました。</li>
+        <li>その他UIいろいろ調整しました。</li>
+        <li>これらの変更は、前バージョンのデバイスを使用しているLiveセットには影響しません。</li>
+      </ul>
+      <li>Version 1.0.0 : 初版 (2020/5/27)</li>
+    </ul>
+  </div>  <hr>
   <h2><span id="afmacro">Audio Frame Macro</span></h2>
   <p><img src="afmacro.png"><br>
     Download at <a href="https://maxforlive.com/library/device/6678/audio-frame-macro">maxforlive.com</a>
