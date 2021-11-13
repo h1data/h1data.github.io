@@ -2,7 +2,7 @@
 <html>
   <head lang="ja">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Style-Type" content="text/css">
     <link rel="stylesheet" href="../m4l.css" type="text/css">
     <title>Max for Live デバイス</title>
   </head>
@@ -29,18 +29,18 @@
         <li><a href="https://docs.google.com/spreadsheets/d/1MyoOs8OYtg80k8z8LJqwr4VtPTgd1pCrn9j5E1dvnZQ">Ableton / Max for Live color settings</a> (Liveテーマの項目と色の早見表)</li>
       </ul>
     </p>
-    <p>Max やAbleton Live をお持ちでない場合でも、<a href="https://www.ableton.com/ja/trial/">こちら</a>からLive Suite のデモ版をダウンロードできます。<br>
-      なんと90日間無料でMax for Live を含む全ての機能が使えます!! (2020年4月時点)<br>
-      Ableton Live Suite 9.7.7 / 10.1.25 / 11.0.5、MAX 6.1.7 / 7.3.5 / 8.1.11、Windows 10 (20H2) でのみ正常動作を確認しています。<br>
+    <p>Max やAbleton Live をお持ちでない場合でも、<a href="https://www.ableton.com/ja/trial/">こちら</a>からLive Suite のデモ版をダウンロードできます。<br/>
+      なんと90日間無料でMax for Live を含む全ての機能が使えます!! (2020年4月時点)<br/>
+      Ableton Live Suite 9.7.7 / 10.1.25 / 11.0.5、MAX 6.1.7 / 7.3.5 / 8.1.11、Windows 10 (20H2) でのみ正常動作を確認しています。<br/>
       macOSでの動作は確認していないため、動作状況や問題点について<a href="https://maxforlive.com/profile/user/h1data">コメント</a>か<a href="https://twitter.com/h1data">何か</a>でお知らせ頂けると助かります。</p>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#altdrum">English</a> / 日本語</div>
     <h2><span id="altdrum">ALT-Synthdrum</span></h2>
-    <p><img src="../ALT-Synthdrum_image.jpg"><br>
+    <p><img src="../ALT-Synthdrum_image.jpg"><br/>
       <a href="https://maxforlive.com/library/device/5278/alt-synthdrum">ダウンロード</a> (maxforlive.com)
-      最終更新: 2020/5/2 / version 1.1.0</p>
+      最終更新: 2020/5/2, version 1.1.0</p>
     <p>シンプルでありがちなモノシンセドラムです。そうです、70年代シンセドラムにインスパイアされています。</p>
-    <p>使用例<br>
+    <p>使用例<br/>
       <audio src="../ALT-Synthdrum_demo.mp3" controls>再生できない場合は<a href="./ALT-Synthdrum_demo.mp3">こちら</a>。</audio>
     </p>
     <p>特徴
@@ -50,7 +50,7 @@
         <li>RC回路を模した矩形波を使用しています。ノコギリ波もあります。</li>
       </ul>
     </p>
-    <input id="altdrum-issues" class="list-check" type="checkbox">
+    <input id="altdrum-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="altdrum-issues">既知の問題</label>
     <div class="list-content">
       <ul>
@@ -58,7 +58,7 @@
         <li>常に各波形の発振器 (VCO、LFO)、エンベロープ生成器分の負荷が発生します。</li>
       </ul>
     </div>
-    <input id="altdrum-releases" class="list-check" type="checkbox">
+    <input id="altdrum-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="altdrum-releases">更新履歴</label>
     <div class="list-content">
       <ul>
@@ -74,7 +74,7 @@
         </ul>
         <li>Version 1.0.6 の変更点 (2019/3/2)</li>
         <ul>
-          <li>adsr~の再トリガー時の遅延を1msecにしました。これによりADSRモードの信頼性が向上したため、既定のMODEをADSRにしました。<br>
+          <li>adsr~の再トリガー時の遅延を1msecにしました。これによりADSRモードの信頼性が向上したため、既定のMODEをADSRにしました。<br/>
             既定のMODEの変更について、バージョン1.0.0でLiveセットにロード済みのインストゥルメントおよびオートメーションには影響はありません。</li>
           <li>冗長だった処理を見直し、アイドル中のCPU使用率を約9%削減しました。(Core i5-4570プロセッサーでCPU使用率1.47%から1.34%に改善)</li>
           <li>矩形波のwavファイル作成に使ったものの、実際の処理には使用していなかった矩形波生成処理を削除しました。興味のある方は<a href=".\generateRectWave.maxpat">こちら</a>。</li>
@@ -86,31 +86,31 @@
       </ul>
     </div>
     <p>製作にあたりSDS2002 (既にダウンロード不可) を大いに参考にさせて頂きました。開発されたTommy氏に感謝致します。</p>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#eono">English</a> / 日本語</div>
     <h2><span id="eono">echo on noteoff</span></h2>
-    <p><img src="../eono.gif"><br>
+    <p><img src="../eono.gif"><br/>
       Download at <a href="https://maxforlive.com/library/device/5563/echo-on-noteoff">ダウンロード</a> (maxforlive.com)
       最終更新: 2020/6/27, version 1.0.0</p>
-    <p>分散和音用の実験的なMIDIエフェクトです。<br>
+    <p>分散和音用の実験的なMIDIエフェクトです。<br/>
       Arpeggiatorの前段に置くと、アルペジオの音量が減衰していく効果が得られます。</p>
-    <input id="eono-issues" class="list-check" type="checkbox">
+    <input id="eono-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="eono-issues">既知の問題</label>
     <div class="list-content">
       <ul>
-        <li>VSTiやMIDI音源によっては、連続して発音すると直前のMIDIノートのヴェロシティを引き継ぐため、<br>
-          エコー効果が得られず同じ音量でノートが継続するだけになったり、新しいMIDIノートのヴェロシティが小さくなる場合があります。<br>
+        <li>VSTiやMIDI音源によっては、連続して発音すると直前のMIDIノートのヴェロシティを引き継ぐため、<br/>
+          エコー効果が得られず同じ音量でノートが継続するだけになったり、新しいMIDIノートのヴェロシティが小さくなる場合があります。<br/>
           モノモードやレガートモードでは発音中の別の音階からヴェロシティを引き継いでしまうこともあります。Delayを40msec程に設定すると改善する場合があります。</li>
         <li>一度に30音以上同時発音すると、エコーが数ミリ秒ずつ遅れることがあります。</li>
       </ul>
     </div>
-    <input id="eono-releases" class="list-check" type="checkbox">
+    <input id="eono-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="eono-releases">更新履歴</label>
     <div class="list-content">
       <ul>
         <li>Version 1.0.0 の変更点 (2020/6/27)</li>
         <ul>
-          <li>よりArpeggiatorとの併用に特化したモードとして、新しく「Auto Stop」ボタンを追加しました。<br>
+          <li>よりArpeggiatorとの併用に特化したモードとして、新しく「Auto Stop」ボタンを追加しました。<br/>
             ボタンをオンにすることで、再生中の実際のノートがある限りノートオフとエコーの発生は保留され、エコーは新しいノートオンを受信することで停止するようになります。</li>
           <li>エコーと同じノートオンを受信してもエコーが継続してしまい、新しいノートオンが正しく再生されない問題を修正しました。</li>
           <li>エコーが無限に繰り返されるのを防ぐため、ノートオンヴェロシティ値の内部計算を浮動小数点で行うようにしました。</li>
@@ -129,36 +129,36 @@
         <li>Version 0.30 : 初版 (2019/7/1)</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#bounce">English</a> / 日本語</div>
     <h2><span id="bounce">bouncing notes</span></h2>
-    <p><img src="../bouncingNotes.png"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br>
+    <p><img src="../bouncingNotes.png"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br/>
       <a href="https://maxforlive.com/library/device/6075/bouncing-notes">ダウンロード</a> (maxforlive.com)
-      最終更新: 2021/2/23 / version 1.1.0</p>
-    <p>ノートオンの間、ピンポン玉が跳ねるようにノートが生成されます。視覚的に効果が分かるようアニメーション窓が付いています。<br>
-      月面の浮遊感から苛烈な60G環境までの跳ね返りをシミュレートできます。<br>
+      最終更新: 2021/2/23, version 1.1.0</p>
+    <p>ノートオンの間、ピンポン玉が跳ねるようにノートが生成されます。視覚的に効果が分かるようアニメーション窓が付いています。<br/>
+      月面の浮遊感から苛烈な60G環境までの跳ね返りをシミュレートできます。<br/>
       複数ノートの処理や、反転モードに対応しています。</p>
-    <input id="bnotes-issues" class="list-check" type="checkbox">
+    <input id="bnotes-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="bnotes-issues">既知の問題</label>
     <div class="list-content">
       <ul>
-        <li>ノートオンの間、Gravityなどパラメーターを変更しても次のバウンドが始まるまで変更が反映されません。<br>
+        <li>ノートオンの間、Gravityなどパラメーターを変更しても次のバウンドが始まるまで変更が反映されません。<br/>
           この問題に対処するにはパッチの大部分を変更 (Max for Live Essentials のNote Echo の様にCPU時間ごとにイベント管理するなど)
           する必要がありますが、<br/>リアルタイムで重力を正確に変えていきたい、といった人は居らっしゃらないと思っています。</li>
-        <li>一度に大量のノートを演奏するとCPU使用率が上がることがあります。(後段のインストゥルメントによる場合もあります)<br>
+        <li>一度に大量のノートを演奏するとCPU使用率が上がることがあります。(後段のインストゥルメントによる場合もあります)<br/>
           DISPスイッチをオフにすることでCPU使用率を抑えられる場合があります。今後の更新でスプライト描画を行わない軽い表示モードを付けるかも知れません。</li>
         <li>反転モードでボールがうまく描画されない場合があります。これは、元々ノートベロシティの最大を127と想定していましたが、反転モードでは際限なくベロシティが上がっていくためです。</li>
       </ul>
     </div>
-    <input id="bnotes-releases" class="list-check" type="checkbox">
+    <input id="bnotes-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="bnotes-releases">更新履歴</label>
     <div class="list-content">
       <ul>
         <li>Version 1.1.0 の変更点 (2021/2/23)</li>
         <ul>
-          <li>ついに、反転バウンドモードが追加されました。Inv.ボタンがオンの場合、バウンドが反転します。<br>
+          <li>ついに、反転バウンドモードが追加されました。Inv.ボタンがオンの場合、バウンドが反転します。<br/>
             Inv.ボタンは押す度に元に戻す履歴を作成するため、何度も切り替える場合はオートメーションへの設定をお勧めします。</li>
-          <li>初速度を調整できるVelocityパラメーターを追加しました。反転モードの場合Velocityの値を小さくすると効果的です。<br>
+          <li>初速度を調整できるVelocityパラメーターを追加しました。反転モードの場合Velocityの値を小さくすると効果的です。<br/>
             また、他のパラメーターのフォントを含めUIを調整しました。</li>
           <li>Minimumパラメーターの初期値を100ミリ秒から50ミリ秒に変更しました。</li>
           <li>これらの変更は以前のバージョンのデバイスを使ったLiveセットには影響しません。</li>
@@ -173,14 +173,14 @@
         <li>Version 1.00 : 初版 (2020/3/21)</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#pitchwc">English</a> / 日本語</div>
     <h2><span id="pitchwc">PitchW curve</span></h2>
-    <p><img src="../pitchwc.gif"><br>
+    <p><img src="../pitchwc.gif"><br/>
       <a href="https://maxforlive.com/library/device/6327/pitchw-curve">ダウンロード</a> (maxforlive.com)
-      最終更新: 2020/5/27 / version 1.0.0</p>
-    <p>ノートオンと連動してピッチベンドカーブを出力する簡素なMIDIエフェクトです。<br>
-      Drum rack内でシンセドラム音色のベンドを下げるのに適しています。<br>
+      最終更新: 2020/5/27, version 1.0.0</p>
+    <p>ノートオンと連動してピッチベンドカーブを出力する簡素なMIDIエフェクトです。<br/>
+      Drum rack内でシンセドラム音色のベンドを下げるのに適しています。<br/>
       <a href="https://maxforlive.com/library/device/">LAEX氏作の"PitchW ADSR"</a>を元に、下記機能を追加しています。</p>
     <ul>
       <li>ノートオンからピッチベンドカーブ開始までの遅延時間を設定できます。</li>
@@ -188,19 +188,19 @@
       <li>ピッチベンド変化は線形だけでなく指数および対数カーブにも対応しています。</li>
       <li>左側の窓はピッチベンド値を表示し、上下の枠をドラッグすることでピッチベンド範囲を調整できます。</li>
     </ul>
-    <input id="pitchwc-issues" class="list-check" type="checkbox">
+    <input id="pitchwc-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="pitchwc-issues">使用上の注意と既知の問題</label>
     <div class="list-content">
       <ul>
         <li>ADSRの様に上がってまた戻るカーブには対応していません。<a href="https://maxforlive.com/library/device/3904/pitchw-adsr">オリジナル</a>を試してみてください。</li>
         <li>入力されたピッチベンドメッセージはすべて無視されます。</li>
-        <li>ピッチベンドメッセージは1ミリ秒ごとに出力されます。<br>
+        <li>ピッチベンドメッセージは1ミリ秒ごとに出力されます。<br/>
           ハードウェアのMIDI機器等に対して、もしメッセージの間隔が短すぎる場合は「Interval」でピッチベンドメッセージの送信感覚を調整できます。</li>
         <li>Shift+ドラッグでピッチベンドカーブの範囲を微調整することができますが、マウスポインタの位置はデバイスの表示範囲に留まりません。</li>        
         <li>Max 6では、デバイスをMIDIトラックに新規追加した際に「To」の値が0で表示されますが実際には表示窓のとおり-8192として動作します。</li>
       </ul>
     </div>
-    <input id="pitchwc-releases" class="list-check" type="checkbox">
+    <input id="pitchwc-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="pitchwc-releases">更新履歴</label>
     <div class="list-content">
       <ul>
@@ -215,13 +215,13 @@
         <li>Version 1.0.0 : 初版 (2020/5/27)</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#afmacro">English</a> / 日本語</div>
     <h2><span id="afmacro">Audio Frame Macro</span></h2>
-    <p><img src="../afmacro.png"><br>
+    <p><img src="../afmacro.png"><br/>
       <a href="https://maxforlive.com/library/device/6678/">ダウンロード</a> (maxforlive.com)
-      最終更新: 2021/5/11 / version 1.3.1</p>
-    <p>PALやNTSCの様なフレームレートで、整数値のパラメーターを粗い解像度で変化させるオーディオエフェクトです。<br>
+      最終更新: 2021/5/11, version 1.3.1</p>
+    <p>PALやNTSCの様なフレームレートで、整数値のパラメーターを粗い解像度で変化させるオーディオエフェクトです。<br/>
       Trackerやチップチューン用のプラグインに強く影響を受けています。</p>
     <p>特徴
       <ul>
@@ -230,19 +230,19 @@
         <li>4つの独立したモジュレーションに対して別なパラメーターを割り当てることができ、各モジュレーションはデバイスのマスタークロックに同期します。</li>
       </ul>
     </p>
-    <input id="afmacro-issues" class="list-check" type="checkbox">
+    <input id="afmacro-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="afmacro-issues">既知の問題</label>
     <div class="list-content">
       <ul>
         <li>Clockの周期は、モジュレーションさせるデバイスやLive自体の内部バッファによって、実際の周期とは完全に一致しません。(サンプリング周波数44.1kHzで10～20数サンプル程の誤差)</li>
         <li>音量など、値が変化してから数ミリ秒かけて連続的に動作するパラメーターでは、段階的に変化する効果が得られない場合があります。</li>
-        <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br>
+        <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br/>
           もし128を超える値が持てるデバイス、特にLive標準のデバイスがあればお知らせください。</li>
         <li>Resyncボタンにもオートメーションが設定可能ですが、副作用としてボタンを押すたびに元に戻す履歴が作成されます。</li>
         <li>スライダーの下に表示される数値はInput Rangeで指定された範囲を超えることがありますが、モジュレーションに用いられる値はInput Range の範囲に絞られます。</li>
       </ul>
     </div>
-    <input id="afmacro-releases" class="list-check" type="checkbox">
+    <input id="afmacro-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="afmacro-releases">更新履歴</label>
     <div class="list-content">
       <ul>
@@ -263,39 +263,39 @@
           <li>Live標準のループセレクターを追加し、ループ開始地点を指定できるようになりました。ループの開始・終了地点にもオートメーションを設定できます。<br/>
             ループ開始地点より前のスライダーは、Resyncボタンを押したときにのみ効果があります。</li>
           <li>Resyncボタンを押した際にマスタークロックの位相を初期化することで、最初のフレームが正しい長さでモジュレーションされるようになりました。</li>
-          <li><s>ループ開始・終了地点やオートメーションが設定されているスライダー以外のスライダーの値を変更するとオートメーションが取り消されてしまう場合がある問題を修正しました。</s><br>
+          <li><s>ループ開始・終了地点やオートメーションが設定されているスライダー以外のスライダーの値を変更するとオートメーションが取り消されてしまう場合がある問題を修正しました。</s><br/>
             ミスによりこのバージョンでは改修されておりませんでした。ご不便おかけし誠に申し訳ございません。</li>
         </ul>
         <li>Version 1.0.0 : 初版 (2020/11/8)</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#mfmacro">English</a> / 日本語</div>
     <h2><span id="mfmacro">MIDI Frame Macro</span></h2>
-    <p><img src="../mfmacro.png"><br>
+    <p><img src="../mfmacro.png"><br/>
       <a href="https://maxforlive.com/library/device/6763">ダウンロード</a> (maxforlive.com)
-      最終更新: 2021/5/11 / version 1.3.1</p>
-    <p>PALやNTSCの様なフレームレートで、整数値のパラメーターを粗い解像度で変化させるMIDIエフェクトです。<br>
+      最終更新: 2021/5/11, version 1.3.1</p>
+    <p>PALやNTSCの様なフレームレートで、整数値のパラメーターを粗い解像度で変化させるMIDIエフェクトです。<br/>
       Audio Frame Macro のMIDIエフェクト版です。</p>
     <p>特徴
       <ul>
-        <li>Audio Frame Macroに加えて、各モジュレーションはノートオンで最初のフレームから同期して始まります。<br>
+        <li>Audio Frame Macroに加えて、各モジュレーションはノートオンで最初のフレームから同期して始まります。<br/>
           ループの開始・終了地点を選択可能で、アタック時やノートが長くなった時に現れる効果を設定できます。</li>
       </ul>
     </p>
-    <input id="mfmacro-issues" class="list-check" type="checkbox">
+    <input id="mfmacro-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="mfmacro-issues">既知の問題</label>
     <div class="list-content">
       <ul>
-        <li>多くのインストゥルメントデバイスは、クリップノイズを発生させないようにノートオンから数ミリ秒遅れて発音します。そのため最初の数フレームの効果は短くなります。<br>
+        <li>多くのインストゥルメントデバイスは、クリップノイズを発生させないようにノートオンから数ミリ秒遅れて発音します。そのため最初の数フレームの効果は短くなります。<br/>
           ループ開始地点より前のフレームか、Cycle/Stepの値を増やすことでアタック時の効果を明確になります。</li>
         <li>Clockの周期は、変化させるデバイスやLive自体の内部バッファによって、実際の変化周期とは完全に一致しません。</li>
         <li>数ミリ秒かけて連続的に変化するパラメーターに対しては、段階的に変化する効果が得られない場合があります。</li>
-        <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br>
+        <li>スケーリングしない場合、変化できる最大値は絶対値で128です。十分と考えられますが、これを超える値を持つパラメーターは変化させられません。<br/>
           もし128を超える値が持てるデバイス、特にLiveのビルトインデバイスがあればお知らせください。</li>
       </ul>
     </div>
-    <input id="mfmacro-releases" class="list-check" type="checkbox">
+    <input id="mfmacro-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="mfmacro-releases">更新履歴</label>
     <div class="list-content">
       <ul>
@@ -316,27 +316,39 @@
         <li>Version 1.0.0 : 初版 (2020/12/6)</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#retronome">English</a> / 日本語</div>
     <h2><span id="retronome">Retro-nome</span></h2>
-    <p><img src="../retronome.png"><br>
-      Download at <a href="https://maxforlive.com/library/device/6723">maxforlive.com</a>
-      (the last update: November 22, 2020 / version 1.0.0)</p>
+    <p><img src="../retronome.gif"><br/>
+      <a href="https://maxforlive.com/library/device/6723">ダウンロード</a> (maxforlive.com)
+      最終更新: 2021/11/13, version 1.0.1</p>
     <p>テンポ同期を支援する視覚エフェクトです。変更できるパラメーターはありません。</p>
-    <input id="retronome-issues" class="list-check" type="checkbox">
-    <label class="list-label" for="retronome-issues">使用上の注意</label>
+    <input id="retronome-issues" class="list-check" type="checkbox" checked />
+    <label class="list-label" for="retronome-issues">既知の問題</label>
     <div class="list-content">
       <ul>
-        <li>1万小節以降は正しく表示されません。</li>
+        <li>Liveセットで拍子変更記号が指定されている場合、小節数と拍数が正しく表示されない場合があります。</li>
+        <li>1万小節以降は小節数が正しく表示されません。</li>
       </ul>
     </div>
-    <hr>
+    <input id="retronome-releases" class="list-check" type="checkbox" checked />
+    <label class="list-label" for="retronome-releases">更新履歴</label>
+    <div class="list-content">
+      <ul>
+        <li>Version 1.0.1 の変更点 (2021/11/13)</li>
+        <ul>
+          <li>描画処理をlcdからjsuiに刷新しました。速いテンポでの描画が改善しCPU使用率が低下しました。</li>
+        </ul>
+        <li>Version 1.0.0 : 初版 (2020/11/22)</li>
+      </ul>
+    </div>
+    <hr/>
     <div class="lang"><a href="../#audioAdsr">English</a> / 日本語</div>
     <h2><span id="audioAdsr">Audio ADSR</span></h2>
-    <p><img src="../AudioADSR.png"><br>
+    <p><img src="../AudioADSR.png"><br/>
       <a href="https://maxforlive.com/library/device/7508">ダウンロード</a> (maxforlive.com)
-      最終更新: 2021/8/7 / version 1.0.0</p>
-    <p>オーディオトラックで使用できる、超シンプルなADSRエンベローパーです。<br>
+      最終更新: 2021/8/7, version 1.0.0</p>
+    <p>オーディオトラックで使用できる、超シンプルなADSRエンベローパーです。<br/>
       Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
     <input id="audioAdsr-issues" class="list-check" type="checkbox" checked>
     <label class="list-label" for="audioAdsr-issues">既知の問題</label>
@@ -345,13 +357,13 @@
         <li>MIDI入力のタイプやチャンネルを続けて変更し元に戻した際、プルダウンリストが余計に元に戻ってしまう場合があります。</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <div class="lang"><a href="../#midirouter">English</a> / 日本語</div>
     <h2><span id="midirouter">MIDI Router</span></h2>
-    <p><img src="../MidiRouter.png"><br>
+    <p><img src="../MidiRouter.png"><br/>
       <a href="https://maxforlive.com/library/device/7509">ダウンロード</a> (maxforlive.com)
       最終更新: 2021/8/7, version 1.0.0</p>
-    <p>オーディオトラック上でオーディオエフェクトデバイスやプラグインのMIDIルーティングを行えるデバイスです。<br>
+    <p>オーディオトラック上でオーディオエフェクトデバイスやプラグインのMIDIルーティングを行えるデバイスです。<br/>
       Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
     <input id="midirouter-issues" class="list-check" type="checkbox" checked>
     <label class="list-label" for="midirouter-issues">既知の問題</label>
@@ -360,7 +372,7 @@
         <li>MIDI入力のタイプやチャンネルを続けて変更し元に戻した際、プルダウンリストが余計に元に戻ってしまう場合があります。</li>
       </ul>
     </div>
-    <hr>
+    <hr/>
     <p><a href="../../">戻る</a></p>
   </body>
 </html>
