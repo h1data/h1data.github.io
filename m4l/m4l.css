@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 1em;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #AAB2B7;
   color: Black;
   font-size: 1em;
@@ -29,7 +30,7 @@ p {
 }
 
 hr {
-  border: 2px #AAA inset;
+  border: 1px #999 solid;
 }
 
 caption {
@@ -73,6 +74,20 @@ ul {
 .list-check:checked + .list-label + .list-content {
   visibility: visible;
   height: auto;
+}
+
+.lang {
+  text-align: right bottom;
+  margin-right: 1em;
+  line-height: 3em;
+  float: right;
+}
+
+.lang-top {
+  text-align: right bottom;
+  margin-right: 1em;
+  line-height: 1.5em;
+  float: right;
 }
 
 address { text-align: center; }
