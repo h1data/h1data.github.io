@@ -49,6 +49,28 @@
         <li>強力なLFOとSWEEP機構をお楽しみください。</li>
         <li>RC回路を模した矩形波を使用しています。ノコギリ波もあります。</li>
       </ul>
+      <input id="altdrum-param" class="list-check" type="checkbox">
+      <label class="list-label" for="altdrum-param">パラメーター説明</label>
+      <div class="list-content">
+        <ul>
+          (以下、オートメーションコントロールセレクタの表示順)
+          <li>MODE: LINEモードとADSRモードを切り替えます。（それぞれ、Maxのline~とadsr~オブジェクトに由来しています）<br/>
+            LINEモードはノートオンから発音までの遅延がなく、ADSRモードは約1ミリ秒の遅延がありますが再トリガー時のクリックノイズが発生しません。(既定: ADSR)</li>
+          <li>SENSE (Sensitivity): ノートオンヴェロシティに対する音量変化の割合を調整します。</li>
+          <li>B.Tune (Beat Tune): ノートオンヴェロシティに対するピッチ変化量を、オクターブ単位で調整します。</li>
+          <li>VCO (VCO Tuning): ピッチを微調整します。</li>
+          <li>OCTAVE (VCO Octave): ピッチをオクターブ単位で調整します。</li>
+          <li>WAVE (VCO Waveform): VCOの波形を切り替えます。</li>
+          <li>ATTACK: 疑似打撃音の音量を調整します。いわゆるADSRのAttackではないです。</li>
+          <li>SUSTAIN: 音の長さを調整します。</li>
+          <li>LFO (LFO Depth): LFOの深度を調整します。</li>
+          <li>FREQ. (LFO Frequency): LFOの周波数を調整します。</li>
+          <li>WAVE (LFO Waveform): LFOの波形を切り替えます。</li>
+          <li>SWEEP (SWEEP Depth): スィープの深さをオクターブ単位で指定します。</li>
+          <li>DIRECTION (SWEEP Direction): スィープをUP（上方向）、DWN（down、下方向）、およびOFF（なし）のいずれかに切り替えます。</li>
+          <li>OUTPUT (OUTPUT Level): 出力音量を調整します。</li>
+        </ul>
+      </div>
     </p>
     <input id="altdrum-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="altdrum-issues">既知の問題</label>
@@ -94,6 +116,22 @@
       最終更新: 2020/6/27, version 1.0.0</p>
     <p>分散和音用の実験的なMIDIエフェクトです。<br/>
       Arpeggiatorの前段に置くと、アルペジオの音量が減衰していく効果が得られます。</p>
+    <input id="eono-param" class="list-check" type="checkbox">
+    <label class="list-label" for="eono-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        (以下、オートメーションコントロールセレクタの表示順)
+        <li>Delay mode (Sync/Free): ノートオフからエコー発生までの遅延時間をテンポに同期するかミリ秒で指定するかを切り替えます。</li>
+        <li>Delay (free/sync): ノートオフからエコー発生までの遅延時間を調整します。</li>
+        <li>Duration mode (Sync/Free): エコーノートの長さをテンポに同期するかミリ秒で指定するかを切り替えます。</li>
+        <li>Delay (free/sync): エコーノートの長さを調整します。</li>
+        <li>Feedback: エコーのフィードバックの割合を調整します。</li>
+        <li>Velocity: 最初のエコーのヴェロシティを割合で調整します。</li>
+        <li>Reset: 全てのノートを止めます。ボタンを押すたびにLiveの元に戻す履歴が作成されます。</li>
+        <li>Auto Stop: オンの場合、Arpeggiatorに特化した動作モードに切り替わります。<br/>
+          エコーノートはデバイスがノートオンを受信すると常に停止されるようになり、発音中の実際のノートがある場合はノートオフとエコーノートの発生が保留されるようになります。</li>
+      </ul>
+    </div>
     <input id="eono-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="eono-issues">既知の問題</label>
     <div class="list-content">
@@ -138,6 +176,23 @@
     <p>ノートオンの間、ピンポン玉が跳ねるようにノートが生成されます。視覚的に効果が分かるようアニメーション窓が付いています。<br/>
       月面の浮遊感から苛烈な60G環境までの跳ね返りをシミュレートできます。<br/>
       複数ノートの処理や、反転モードに対応しています。</p>
+    <input id="bnotes-param" class="list-check" type="checkbox" />
+    <label class="list-label" for="bnotes-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        <li>Gravity: 重力を表し、ボールがどれだけ速く落ちるかを調整します。</li>
+        <li>Velocity: ボールの初速度を調整します。既定値の20は、100*20m/ミリ秒を表し、100の場合は2m/秒になります。</li>
+        <li>Rebound: しばしばeで記される反発係数を表します。係数が大きくなるにつれ、エコーノートのヴェロシティ減少は遅くなります。</li>
+        <li>Vel D/W: ヴェロシティのDry/Wet比を表します。いわゆるヴェロシティセンシティビティです。</li>
+        <li>Duration: ボールがバウンドする間隔に対するノートの長さの比率を調整します。</li>
+        <li>Minimum: ボールがバウンドする間隔の最小時間を調整します。最小時間に達した後の挙動はHOLDボタンのオンオフによって変わります。</li>
+        <li>HOLD: オンの場合、ボールがバウンドする間隔がMinimumで設定された最小時間に達した後も継続します。<br/>
+          オフの場合、ボールがバウンドする間隔がMinimumで設定された最小時間に達した時点でバウンドが停止します。</li>
+        <li>DISP: アニメーションの表示有無を切り替えます。</li>
+        <li>Inv. (Inverse): オンの場合、バウンドが反転し、ノートの間隔が徐々に長くなります。<br/>
+          ヒント: 反転モードでは、Velocityの値を2か3など小さくすることで短い間隔からバウンドが始まって良い感じになります。</li>
+      </ul>
+    </div>
     <input id="bnotes-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="bnotes-issues">既知の問題</label>
     <div class="list-content">
@@ -188,6 +243,20 @@
       <li>ピッチベンド変化は線形だけでなく指数および対数カーブにも対応しています。</li>
       <li>左側の窓はピッチベンド値を表示し、上下の枠をドラッグすることでピッチベンド範囲を調整できます。</li>
     </ul>
+    <input id="pitchwc-param" class="list-check" type="checkbox" />
+    <label class="list-label" for="pitchwc-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        <li>From: ノートオン時点の初期ピッチベンド値を調整します。</li>
+        <li>To: ピッチベンドカーブの終着点の値を調整します。</li>
+        <li>Exp. (Exponent): 指数カーブの次数を調整します。<br/>
+           1.00: 線形、1.00以上: 指数カーブ、1.00以下: 対数カーブになります。</li>
+        <li>Delay mode: ノートオンからカーブ開始までの時間をノート長かミリ秒指定にするかを切り替えます。</li>
+        <li>Delay time: ノートオンからカーブ開始までの時間を調整します。</li>
+        <li>Sustain mode: カーブの持続時間をノート長かミリ秒指定にするかを切り替えます。</li>
+        <li>Sustain time: カーブの持続時間を調整します。</li>
+      </ul>
+    </div>
     <input id="pitchwc-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="pitchwc-issues">使用上の注意と既知の問題</label>
     <div class="list-content">
@@ -228,8 +297,41 @@
         <li>インストゥルメントデバイスやプラグインのキーシフト、オクターブシフト、波形選択など整数値のパラメーターを調整しやすいよう設計されています。</li>
         <li>小数値のパラメーターに対して、スケーリングした値でモジュレーションをかけることも可能です。</li>
         <li>4つの独立したモジュレーションに対して別なパラメーターを割り当てることができ、各モジュレーションはデバイスのマスタークロックに同期します。</li>
+        <li>デバイスのMIDI入力にルーティングすることで、MIDIノートを受信してステップの最初から再開することができます。（Live 11以降）</li>
       </ul>
     </p>
+    <input id="afmacro-param" class="list-check" type="checkbox" />
+    <label class="list-label" for="afmacro-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        <li>ClockMode: クロック周期をHzかノート長で指定するかを切り替えます。</li>
+        <li>ClockFrequency: クロック周期をHzで調整します。<br/>
+          実際のステップ間隔はインターレースフレームを再現するため指定した値の2倍になります。29.97Hz: NTSC規格、25Hz: PAL規格にそれぞれ相当します。</li>
+        <li>CLockRate: クロック周期をノート長で調整します。</li>
+        <li>パラメーターセレクター（Clockの下部）: 4つの独立したパラメーターマクロを切り替えます。</li>
+        <li>Resync: ボタンを押すと、全パラメーターマクロのステップ位置が1番目に戻り同期されます。<br/>
+          ボタンを押すたびにLiveの元に戻す履歴が作成されます。<br/>
+          ヒント: Resyncにオートメーションを設定することで、MIDI入力無しでアタック効果を付けることができます。</li>
+        <br/>以下は各パラメーターマクロごとの設定になります。
+        <li>ループセレクター（スライダーの上部）: ループ位置を調整します。</li>
+        <li>スライダー: 各フレームごとの値を調整します。</li>
+        <li>Values（スライダーの下部）: 各フレームごとのモジュレーション値を表示します。ドラッグやキーボード入力で変更でき、オートメーションも設定できます。<br/>
+          これらの値はInput Rangeの範囲を超えて指定できますが、実際のモジュレーションはInput Rangeに従います。</li>
+        <li>Cycle / Step: スライダーの1ステップに要するクロックのサイクル数を調整します。値が大きくなるにつれステップの変化が遅くなります。</li>
+        <li>Input Range: 各スライダー値の最小値・最大値を調整します。</li>
+        <li>Scale (S): オンの場合、モジュレーション値は対象のパラメーターの範囲にスケーリングされます。<br/>
+          音量など小数の値を取るパラメータに適しています。</li>
+        <li>Fit: ボタンを押すと、Input Rangeが対象のパラメーターと同じ範囲に設定されます。<br/>
+          整数値を取るパラメーターに適しています。モジュレーション対象のパラメーターが設定（Map）されている場合のみ押下できます。</li>
+        <li>0-7F: ボタンを押すと、Input Rangeが0から127（0x7F）の範囲に設定されます。<br/>
+          オン・オフや項目値を取るパラメーターが設定（Map）されている場合は押下できません。</li>
+        <li>+/-: ボタンを押すと、Input Rangeが-64から63の範囲に設定されます。パンなど2方向のパラメーターに適しています。<br/>
+          オン・オフや項目値を取るパラメーターが設定（Map）されている場合は押下できません。</li>
+        <li>Map: ボタンを押すと、マッピングモードに切り替わります。マッピング可能なLive上のパラメーターをクリックしてモジュレーション対象を選択します。<br/>
+          選択されたパラメーター名はUnmapボタン（x）の右側に表示されます。</li>
+        <li>Unmap (x): ボタンを押すと、マッピングされたパラメーターの選択が解除されます。</li>
+      </ul>
+    </div>
     <input id="afmacro-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="afmacro-issues">既知の問題</label>
     <div class="list-content">
@@ -283,6 +385,35 @@
           ループの開始・終了地点を選択可能で、アタック時やノートが長くなった時に現れる効果を設定できます。</li>
       </ul>
     </p>
+    <input id="mfmacro-param" class="list-check" type="checkbox" />
+    <label class="list-label" for="mfmacro-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        <li>ClockMode: クロック周期をHzかノート長で指定するかを切り替えます。</li>
+        <li>ClockFrequency: クロック周期をHzで調整します。<br/>
+          実際のステップ間隔はインターレースフレームを再現するため指定した値の2倍になります。29.97Hz: NTSC規格、25Hz: PAL規格にそれぞれ相当します。</li>
+        <li>CLockRate: クロック周期をノート長で調整します。</li>
+        <li>パラメーターセレクター（Clockの下部）: 4つの独立したパラメーターマクロを切り替えます。</li>
+        <br/>以下は各パラメーターマクロごとの設定になります。
+        <li>ループセレクター（スライダーの上部）: ループ位置を調整します。</li>
+        <li>スライダー: 各フレームごとの値を調整します。</li>
+        <li>Values（スライダーの下部）: 各フレームごとのモジュレーション値を表示します。ドラッグやキーボード入力で変更でき、オートメーションも設定できます。<br/>
+          これらの値はInput Rangeの範囲を超えて指定できますが、実際のモジュレーションはInput Rangeに従います。</li>
+        <li>Cycle / Step: スライダーの1ステップに要するクロックのサイクル数を調整します。値が大きくなるにつれステップの変化が遅くなります。</li>
+        <li>Input Range: 各スライダー値の最小値・最大値を調整します。</li>
+        <li>Scale (S): オンの場合、モジュレーション値は対象のパラメーターの範囲にスケーリングされます。<br/>
+          音量など小数の値を取るパラメータに適しています。</li>
+        <li>Fit: ボタンを押すと、Input Rangeが対象のパラメーターと同じ範囲に設定されます。<br/>
+          整数値を取るパラメーターに適しています。モジュレーション対象のパラメーターが設定（Map）されている場合のみ押下できます。</li>
+        <li>0-7F: ボタンを押すと、Input Rangeが0から127（0x7F）の範囲に設定されます。<br/>
+          オン・オフや項目値を取るパラメーターが設定（Map）されている場合は押下できません。</li>
+        <li>+/-: ボタンを押すと、Input Rangeが-64から63の範囲に設定されます。パンなど2方向のパラメーターに適しています。<br/>
+          オン・オフや項目値を取るパラメーターが設定（Map）されている場合は押下できません。</li>
+        <li>Map: ボタンを押すと、マッピングモードに切り替わります。マッピング可能なLive上のパラメーターをクリックしてモジュレーション対象を選択します。<br/>
+          選択されたパラメーター名はUnmapボタン（x）の右側に表示されます。</li>
+        <li>Unmap (x): ボタンを押すと、マッピングされたパラメーターの選択が解除されます。</li>
+      </ul>
+    </div>
     <input id="mfmacro-issues" class="list-check" type="checkbox" checked />
     <label class="list-label" for="mfmacro-issues">既知の問題</label>
     <div class="list-content">
@@ -350,6 +481,23 @@
       最終更新: 2021/8/7, version 1.0.0</p>
     <p>オーディオトラックで使用できる、超シンプルなADSRエンベローパーです。<br/>
       Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
+    <input id="audioAdsr-param" class="list-check" type="checkbox" checked />
+    <label class="list-label" for="audioAdsr-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        <li>MIDI Input Type: MIDI入力をMIDIトラックか外部MIDI入力から選択します。MIDIトラックの「MIDI From」と大体同じです。</li>
+        <li>MIDI Input Channel: MIDI Input Typeで選択した入力からチャンネルを選択します。<br/>
+          選択可能なチャンネルを持つMIDI入力が選択されていた場合のみ有効です。</li>
+        <li>Attack: エンベロープのアタック時間を調整します。</li>
+        <li>Decay: エンベロープのディケイ時間を調整します。</li>
+        <li>Sustain: エンベロープのディケイ後のサスティン音量を調整します。</li>
+        <li>Release: エンベロープのリリース時間を調整します。</li>
+        <li>V. Sense: エンベロープの音量に対するヴェロシティ感度を調整します。</li>
+        <li>Curve: エンベロープのカーブ度合いを調整します。</li>
+        <li>Dry/Wet: エンベロープを掛け合わせた音と元の入力音の割合を調整します。<br/>
+          ヒント: 負の値に設定することでサイドチェインコンプの様な効果が得られるかもしれません。</li>
+      </ul>
+    </div>
     <input id="audioAdsr-issues" class="list-check" type="checkbox" checked>
     <label class="list-label" for="audioAdsr-issues">既知の問題</label>
     <div class="list-content">
@@ -365,6 +513,18 @@
       最終更新: 2021/8/7, version 1.0.0</p>
     <p>オーディオトラック上でオーディオエフェクトデバイスやプラグインのMIDIルーティングを行えるデバイスです。<br/>
       Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
+    <input id="midirouter-param" class="list-check" type="checkbox" checked />
+    <label class="list-label" for="midirouter-param">パラメーター説明</label>
+    <div class="list-content">
+      <ul>
+        <li>MIDI Input Type: MIDI入力元をMIDIトラックか外部MIDI入力から選択します。MIDIトラックの「MIDI From」と大体同じです。</li>
+        <li>MIDI Input Channel: MIDI Input Typeで選択した入力からチャンネルを選択します。<br/>
+          選択可能なチャンネルを持つMIDI入力が選択されていた場合のみ有効です。</li>
+        <li>MIDI Output Type: MIDI出力先をMIDIトラックか外部MIDI出力から選択します。MIDIトラックの「MIDI To」と大体同じです。</li>
+        <li>MIDI Output Channel: MIDI Output Typeで選択した出力からチャンネルかデバイスを選択します。<br/>
+          選択可能なチャンネルかデバイスを持つMIDI出力先が選択されていた場合のみ有効です。</li>
+      </ul>
+    </div>
     <input id="midirouter-issues" class="list-check" type="checkbox" checked>
     <label class="list-label" for="midirouter-issues">既知の問題</label>
     <div class="list-content">
