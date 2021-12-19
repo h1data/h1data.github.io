@@ -243,7 +243,7 @@
     <h2><span id="pitchwc">PitchW curve</span></h2>
     <p><img src="pitchwc.gif"><br/>
       Download at <a href="https://maxforlive.com/library/device/6327/pitchw-curve">maxforlive.com</a>
-      (the last update: May 27, 2020 / version 1.0.0)</p>
+      (the last update: December 19, 2021 / version 1.3.0)</p>
     <p>A simple MIDI effect which generates pitch bend message curves with note on.<br/>
       Suitable for bending down synth percussion sounds in drum rack.<br/>
       Based on the device <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">"PitchW ADSR" by LAEX</a> with additional features below.</p>
@@ -265,6 +265,9 @@
         <li>Delay time: Adjusts delay time to start pitch bend curve from note on in note length or milliseconds.</li>
         <li>Sustain mode: Switches the sustain time mode between beat synced and time-based.</li>
         <li>Sustain time: Adjusts the duration of pitch bend curve in note length or milliseconds.</li>
+        <li>Legato: When enabled, the curve wouldn't start with note on while playing at least one note. Suitable for playing with poly notes.</li>
+        <li>Pitch Bend Monitor: Displays the range and the current value of pitch bend. Dragging bracket shapes changes the range.<br/>
+          Shift+drag can adjust finely. Cmd/ctrl+drag changes in 25 steps (+/- 12 steps and zero). 129 steps with shift+cmd/ctrl (+/- 64 steps and zero).</li>
       </ul>
     </div>
     <input id="pitchwc-issues" class="list-check" type="checkbox" checked />
@@ -277,16 +280,22 @@
           If the time interval of messages is too short for such as hardware midi instruments,<br/>
           you can adjust by the 'Interval' value.</li> 
         <li>With Shift+drag, You can adjust the range finely, however, the position of mouse pointer exceeds the display area of the device.</li>
-        <li>In Max 6, 'To' value seems '0' when the device was added to MIDI track. It works as -8192 as the indicator shows.</li>
-        </ul>
+        <li>In Max 6, 'To' value seems '0' when the device was added to MIDI track. It works as -8192 as the pitch bend monitor shows.</li>
+      </ul>
     </div>
     <input id="pitchwc-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="pitchwc-releases">Release notes</label>
     <div class="list-content">
       <ul>
+        <li>Changes in version 1.3.0 (December 19, 2021)</li>
+        <ul>
+          <li>Added "Legato" button for playing with poly notes. When enabled, the curve wouldn't start with note on while playing at least one note.</li>
+          <li>Dragging bracket shapes in the pitch bend monitor with cmd/ctrl changes in 25 steps (+/- 12 steps and zero). 129 steps with shift+cmd/ctrl (+/- 64 steps and zero).</li>
+          <li>Added LED indicator lit when received note on. (for space-holder)</li>
+        </ul>
         <li>Changes in version 1.2.0 (October 30, 2021)</li>
         <ul>
-          <li>Now you can change the range of the pitch bend curve by dragging bracket shapes in the pitch bend indicator. Shift+drag can adjust finely.</li>
+          <li>Now you can change the range of the pitch bend curve by dragging bracket shapes in the pitch bend monitor. Shift+drag can adjust finely.</li>
           <li>Added "Interval" number box to adjust the interval of pitch bend MIDI messages.</li>
           <li>Now pitch bend curve stops when the device was inactivated and does not continue after activation.</li>
           <li>And some UI tweaks.</li>

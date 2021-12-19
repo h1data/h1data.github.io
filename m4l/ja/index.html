@@ -233,7 +233,7 @@
     <h2><span id="pitchwc">PitchW curve</span></h2>
     <p><img src="../pitchwc.gif"><br/>
       <a href="https://maxforlive.com/library/device/6327/pitchw-curve">ダウンロード</a> (maxforlive.com)
-      最終更新: 2020/5/27, version 1.0.0</p>
+      最終更新: 2021/12/19, version 1.3.0</p>
     <p>ノートオンと連動してピッチベンドカーブを出力する簡素なMIDIエフェクトです。<br/>
       Drum rack内でシンセドラム音色のベンドを下げるのに適しています。<br/>
       <a href="https://maxforlive.com/library/device/">LAEX氏作の"PitchW ADSR"</a>を元に、下記機能を追加しています。</p>
@@ -255,6 +255,10 @@
         <li>Delay time: ノートオンからカーブ開始までの時間を調整します。</li>
         <li>Sustain mode: カーブの持続時間をノート長かミリ秒指定にするかを切り替えます。</li>
         <li>Sustain time: カーブの持続時間を調整します。</li>
+        <li>Legato: オンにすると、発生中のノートがある間はノートオンを受信してもカーブが始まりません。和音との使用に適しています。（初期値: オフ）</li>
+        <li>ピッチベンド表示部分: ピッチベンドカーブの範囲や現在の値を表示します。上下の枠をドラッグすることで範囲のFrom、Toの値を変更できます。<br/>
+          Shift を押しながら枠をドラッグすることで微調整ができます。CmdまたはCtrlを押しながらピッチベンド範囲の枠をドラッグすると25段階（上下に12段階と0）で調整できます。<br/>
+          ShiftとCmdまたはCtrlでは129段階（上下に64段階と0）で調整できます。</li>
       </ul>
     </div>
     <input id="pitchwc-issues" class="list-check" type="checkbox" checked />
@@ -273,9 +277,15 @@
     <label class="list-label" for="pitchwc-releases">更新履歴</label>
     <div class="list-content">
       <ul>
+        <li>Version 1.3.0 の変更点 (2021/12/19)</li>
+        <ul>
+          <li>和音での使用に適したモードとして、「Legato」ボタンを追加しました。</li>
+          <li>CmdまたはCtrlを押しながらピッチベンド範囲の枠をドラッグすると25段階（上下に12段階と0）で調整できるようになりました。ShiftとCmdまたはCtrlでは129段階（上下に64段階と0）で調整できます。</li>
+          <li>ノートオン受信時に光るボタンを追加しました。場所が余ったので。。</li>
+        </ul>
         <li>Version 1.2.0 の変更点 (2021/10/30)</li>
         <ul>
-          <li>ピッチベンド表示窓の上下の枠をドラッグすることで、ピッチベンドカーブの範囲を指定できるようになりました。Shift+ドラッグで微調整も可能です。</li>
+          <li>ピッチベンド表示部分の上下の枠をドラッグすることで、ピッチベンドカーブの範囲を指定できるようになりました。Shift+ドラッグで微調整も可能です。</li>
           <li>「Interval」でピッチベンドメッセージの送信感覚を調整できるようになりました。</li>
           <li>デバイスが非アクティブになった時にピッチベンドカーブを停止し、再度アクティブになったあとカーブが継続しないようにしました。</li>
           <li>その他UIいろいろ調整しました。</li>
