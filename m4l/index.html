@@ -177,7 +177,8 @@
     <h2><span id="bounce">bouncing notes</span></h2>
     <p><img src="bouncingNotes.png"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br/>
       Download at <a href="https://maxforlive.com/library/device/6075/bouncing-notes">maxforlive.com</a>
-      (the last update: February 23, 2021 / version 1.1.0)</p>
+      (the last update: April 8, 2022 / version 1.2.0)</p>
+    <p>*** This is not an official device. If you were looking for that, please visit <a href="https://www.ableton.com/packs/">https://www.ableton.com/packs/</a>. ***</p>
     <p>While note on, generates repeating notes like bouncing table-tennis ball with dynamic display animation.<br/>
       Simulates bounces from the levitation-ish on the Moon to fierce conditions of 60G.<br/>
       And available in polyphonic and inverse mode!</p>
@@ -195,7 +196,7 @@
         <li>HOLD: When enabled, bouncing notes continue after the duration of bounces reached 'Minimum' time.<br/>
           When disabled, bounces end at duration time of bounces reached 'Minimum' time.</li>
         <li>DISP: Enable or disable the dynamic display animation.</li>
-        <li>Inv. (Inverse): When enabled, the bounces are inverted; the duration of notes increases.<br/>
+        <li>Inverse: When enabled, the bounces are inverted; the duration of notes increases.<br/>
           TIP: When inverse mode, you can start bounces from shorter duration by setting 'Velocity' to a small number (2-3).</li>
       </ul>
     </div>
@@ -207,16 +208,25 @@
           It is necessary to change most of the patch code (the way to manage by CPU time such as Note Echo in Max for Live Essentials) for correcting this issue,<br/>
           however, no one might want to manipulate gravity in real-time.</li>
         <li>Playing many notes at a time causes some CPU usage. (might be caused by the instruments after this device)<br/>
-          Disabling DISP switch may reduce CPU usage. Future updates may introduce light display mode without sprites.</li>
-        <li>Bouncing balls might be not displayed properly when inverse mode.
-          Because the display supposed the maximum note velocity is 127, however,
-          the velocity of balls increases without limit when inverse mode.</li>
+          Disabling DISP switch may reduce CPU usage.</li>
       </ul>
     </div>
     <input id="bnotes-releases" class="list-check" type="checkbox" />
     <label class="list-label" for="bnotes-releases">Release notes</label>
     <div class="list-content">
       <ul>
+        <li>Changes in version 1.2.0 (April 8, 2022)</li>
+        <ul>
+          <li>Refined graphic rendering method migrated from lcd to jsui object. This allows features below.
+            <ul>
+              <li>The balls have better color schemes for conditions in user Lives themes or adjusted brightness.</li>
+              <li>When the inverse mode, the balls go in the opposite direction.</li>
+              <li>When the balls reached outside of the display, they appear from another side to keep visible.</li>
+              <li>Less CPU usage and more accuracy when lots of poly notes.</li>
+            </ul>
+          </li>
+          <li>Fixed an issue when internal velocity may go far below 1 and it needs much time to recover velocity after the inverse mode was enabled.</li>
+        </ul>
         <li>Changes in version 1.1.0 (February 23, 2021)</li>
         <ul>
           <li>Added the inverted bouncing feature at last! The bouncing is inverted when Inv. button is on.<br/>
@@ -253,7 +263,7 @@
       <li>The pitch bend curve can be linear, exponential, or logarithmic.</li>
       <li>Dynamic visual display which represents pitch bend value and adjusts the range of the pitch bend curve.</li>
     </ul>
-    <input id="pitchwc-param" class="list-check" type="checkbox" checked />
+    <input id="pitchwc-param" class="list-check" type="checkbox" />
     <label class="list-label" for="pitchwc-param">Parameters</label>
     <div class="list-content">
       <ul>
