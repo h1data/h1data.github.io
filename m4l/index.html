@@ -519,7 +519,7 @@
     <h2><span id="audioAdsr">Audio ADSR</span></h2>
     <p><img src="AudioADSR.png"><br/>
       Download at <a href="https://maxforlive.com/library/device/7508">maxforlive.com</a>
-      (the last update: August 7, 2021 / version 1.0.0)</p>
+      (the last update: April 23, 2022 / version 1.1.0)</p>
     <p>A super simple ADSR enveloper for audio tracks.<br/>
       Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
     <input id="audioAdsr-param" class="list-check" type="checkbox" checked />
@@ -529,6 +529,7 @@
         <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
         <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br/>
           Available only when MIDI Input Type has selectable channels.</li>
+        <li>here: When pressed, MIDI Input will be routed to the track which the device belongs if the track is a MIDI track.</li>
         <li>Attack: Adjusts the Attack time of the envelope.</li>
         <li>Decay: Adjusts the Decay time of the envelope.</li>
         <li>Sustain: Adjusts the Sustain volume of the envelope.</li>
@@ -536,7 +537,8 @@
         <li>V. Sense: Adjusts the velocity sensitivity for the envelope's amplitude.</li>
         <li>Curve: Adjust the Curvature of the envelope.</li>
         <li>Dry/Wet: Adjust the ratio of processed sound and raw sound.<br/>
-          TIP: Setting negative value produces like sidechain-compressed effect.</li>
+          TIP: setting negative value produces like sidechain-compressed effect.</li>
+        <li>Legato: When enabled, the envelope wouldn't start with note on while playing at least one note.</li>
       </ul>
     </div>
     <input id="audioAdsr-issues" class="list-check" type="checkbox" checked />
@@ -544,6 +546,18 @@
     <div class="list-content">
       <ul>
         <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
+      </ul>
+    </div>
+    <input id="audioAdsr-releases" class="list-check" type="checkbox" />
+    <label class="list-label" for="audioAdsr-releases">Release notes</label>
+    <div class="list-content">
+      <ul>
+        <li>Changes in version 1.1.0 (April 23, 2022)</li>
+        <ul>
+          <li>Added "Legato" button to enable the mode for poly notes.</li>
+          <li>Added "here" button routing to the track where the device belongs.</li>
+        </ul>
+        <li>Version 1.0.0 : the first release (August 7, 2021)</li>
       </ul>
     </div>
     <hr/>

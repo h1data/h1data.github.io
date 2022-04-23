@@ -508,7 +508,7 @@
     <h2><span id="audioAdsr">Audio ADSR</span></h2>
     <p><img src="../AudioADSR.png"><br/>
       <a href="https://maxforlive.com/library/device/7508">ダウンロード</a> (maxforlive.com)
-      最終更新: 2021/8/7, version 1.0.0</p>
+      最終更新: 2022/4/23, version 1.1.0</p>
     <p>オーディオトラックで使用できる、超シンプルなADSRエンベローパーです。<br/>
       Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
     <input id="audioAdsr-param" class="list-check" type="checkbox" checked />
@@ -518,6 +518,7 @@
         <li>MIDI Input Type: MIDI入力をMIDIトラックか外部MIDI入力から選択します。MIDIトラックの「MIDI From」と大体同じです。</li>
         <li>MIDI Input Channel: MIDI Input Typeで選択した入力からチャンネルを選択します。<br/>
           選択可能なチャンネルを持つMIDI入力が選択されていた場合のみ有効です。</li>
+        <li>here: ボタンを押すと、MIDI Input を自動的にデバイスが置かれているMIDIトラックの入力に変更します。オーディオトラックに置かれていた場合は押しても何も起きません。</li>
         <li>Attack: エンベロープのアタック時間を調整します。</li>
         <li>Decay: エンベロープのディケイ時間を調整します。</li>
         <li>Sustain: エンベロープのディケイ後のサスティン音量を調整します。</li>
@@ -526,6 +527,7 @@
         <li>Curve: エンベロープのカーブ度合いを調整します。</li>
         <li>Dry/Wet: エンベロープを掛け合わせた音と元の入力音の割合を調整します。<br/>
           ヒント: 負の値に設定することでサイドチェインコンプの様な効果が得られるかもしれません。</li>
+        <li>Legato: オンにすると、発生中のノートがある間はノートオンを受信してもカーブが始まりません。和音との使用に適しています。（初期値: オフ）</li>
       </ul>
     </div>
     <input id="audioAdsr-issues" class="list-check" type="checkbox" checked>
@@ -533,6 +535,18 @@
     <div class="list-content">
       <ul>
         <li>MIDI入力のタイプやチャンネルを続けて変更し元に戻した際、プルダウンリストが余計に元に戻ってしまう場合があります。</li>
+      </ul>
+    </div>
+    <input id="audioAdsr-releases" class="list-check" type="checkbox" />
+    <label class="list-label" for="audioAdsr-releases">更新履歴</label>
+    <div class="list-content">
+      <ul>
+        <li>Version 1.1.0 の変更点 (2022/4/23)</li>
+        <ul>
+          <li>和音で使用できるようLegatoボタンを追加しました。</li>
+          <li>デバイスが置かれているMIDIトラックに自動ルーティングできるhereボタンを追加しました。</li>
+        </ul>
+        <li>Version 1.0.0 : 初版 (2021/8/7)</li>
       </ul>
     </div>
     <hr/>
