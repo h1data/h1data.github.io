@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <link rel="stylesheet" href="m4l.css" type="text/css">
     <title>Max for Live Devices</title>
   </head>
   <body>
-    <div class="lang-top">English / <a href="./ja/">日本語</a></div>
+    <div class="lang" aria>English / <a href="./ja/">日本語</a></div>
     <h1>Max for Live Devices</h1>
-    <p>
-      <ul>
-        <li><a href="#altdrum">ALT-Synthdrum</a>: instrument</li>
-        <li><a href="#eono">echo on noteoff</a>: midi effect</li>
-        <li><a href="#bounce">bouncing notes</a>: midi effect</li>
-        <li><a href="#pitchwc">PitchW curve</a>: midi effect</li>
-        <li><a href="#afmacro">Audio Frame Macro</a>: audio effect (LFO-like parameter modulator)</li>
-        <li><a href="#mfmacro">MIDI Frame Macro</a>: midi effect (LFO-like parameter modulator)</li>
-        <li><a href="#retronome">Retro-nome</a>: audio effect (visualization)</li>
-        <li><a href="#audioAdsr">Audio ADSR</a>: audio effect</li>
-        <li><a href="#midirouter">MIDI Router</a>: audio effect (utility device)</li>
-      </ul>
-    </p>
-    <p>For M4L developers
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#altdrum">ALT-Synthdrum</a>: instrument</li>
+          <li><a href="#eono">echo on noteoff</a>: midi effect</li>
+          <li><a href="#bounce">bouncing notes</a>: midi effect</li>
+          <li><a href="#pitchwc">PitchW curve</a>: midi effect</li>
+          <li><a href="#afmacro">Audio Frame Macro</a>: audio effect (LFO-like parameter modulator)</li>
+          <li><a href="#mfmacro">MIDI Frame Macro</a>: midi effect (LFO-like parameter modulator)</li>
+          <li><a href="#retronome">Retro-nome</a>: audio effect (visualization)</li>
+          <li><a href="#audioAdsr">Audio ADSR</a>: audio effect</li>
+          <li><a href="#midirouter">MIDI Router</a>: audio effect (utility device)</li>
+        </ul>
+      </nav>
+      <p>Self-made plugin devices for DAW software Ableton Live Suite.<br/>
+        Even if you don't own MAX or Ableton Live, you can download the demo version of Live Suite <a href="https://www.ableton.com/trial/">here</a>.<br/>
+        It's free for 90 days with all functions including Max for Live!! (as of April 2020)<br/>
+        Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.1.1, MAX 6.1.7 / 7.3.5 / 8.3.0 on Windows 10 (21H2).<br/>
+        Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/h1data">notify the author</a>
+        if the device works or doesn't on macOS, or has any inconveniences.</p>
+    </header>
+    <section>
+      <h3>For M4L developers</h3>
       <ul>
         <li><a href="https://github.com/h1data/M4L-ioRouting-js">ioRouting.js</a>: Javascript routing Audio or MIDI I/O</li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1MyoOs8OYtg80k8z8LJqwr4VtPTgd1pCrn9j5E1dvnZQ">Ableton / Max for Live color settings</a> (color cheat sheet)</li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1MyoOs8OYtg80k8z8LJqwr4VtPTgd1pCrn9j5E1dvnZQ">Ableton / Max for Live color settings</a>: color cheat sheet</li>
       </ul>
-    </p>
-    <p>Self-made plugin devices for DAW software Ableton Live Suite.<br/>
-      Even if you don't own MAX or Ableton Live, you can download the demo version of Live Suite <a href="https://www.ableton.com/trial/">here</a>.<br/>
-      It's free for 90 days with all functions including Max for Live!! (as of April 2020)<br/>
-      Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.0.5, MAX 6.1.7 / 7.3.5 / 8.1.11 on Windows 10 (1909).<br/>
-      Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/h1data">notify the author</a>
-      if the device works or doesn't on macOS, or has any inconveniences.</p>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#altdrum">日本語</a></div>
-    <h2><span id="altdrum">ALT-Synthdrum</span></h2>
-    <p><img src="ALT-Synthdrum_image.jpg"><br/>
-      Download at <a href="https://maxforlive.com/library/device/5278/alt-synthdrum">maxforlive.com</a>
-      (the last update: May 2, 2020 / version 1.1.0)</p>
-    <p>Yet another simple monophonic drum synth. Yes, inspired by 1970's drum synths.</p>
-    <p>Sound Examples<br/>
+    </section>
+    <section id="altdrum">
+      <div class="lang">English / <a href="./ja/#altdrum">日本語</a></div>
+      <h2>ALT-Synthdrum</h2>
+      <header>
+        <p><img src="ALT-Synthdrum_image.jpg" alt="The image of ALT-Synthdrum device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/5278/alt-synthdrum">maxforlive.com</a>
+          (the last update: May 2, 2020 / version 1.1.0)</p>
+        <p>Yet another simple monophonic drum synth. Yes, inspired by 1970's drum synths.</p>
+      </header>
+      <h3>Sound Examples</h3>
       <audio src="./ALT-Synthdrum_demo.mp3" controls>Click <a href="./ALT-Synthdrum_demo.mp3">here</a> to play.</audio>
-    </p>
-    <p>
-      Features
+      <h3>Features</h3>
       <ul>
         <li>Punchy pseudo attack sound. ("ATTACK" dial is for volume, not attack rate)</li>
         <li>Dynamic LFO and SWEEP generator.</li>
         <li>Rectangle wave is made of simulated RC circuits. Also has additional saw wave for VCO and LFO.</li>
       </ul>
-      <input id="altdrum-param" class="list-check" type="checkbox">
-      <label class="list-label" for="altdrum-param">Parameters</label>
-      <div class="list-content">
+      <details>
+        <summary>Parameters</summary>
         <ul>
           (ordered in the appearance of the automation control chooser list)
           <li>MODE: Switches between LINE mode and ADSR mode. (the name is came from Max objects; line~ and adsr~)<br/>
@@ -72,522 +75,544 @@
           <li>DIRECTION (SWEEP Direction): Switches sweep direction from UP, DWN (down), and OFF.</li>
           <li>OUTPUT (OUTPUT Level): Adjusts the output level.</li>
         </ul>
-      </div>
-      <input id="altdrum-issues" class="list-check" type="checkbox" checked />
-      <label class="list-label" for="altdrum-issues">Known issues</label>
-      <div class="list-content">
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
           <li>LINE mode occurs no delay, however, may sounds clip noise by retrigger.</li>
           <li>Consumes CPU power anytime for each oscillator (both VCO and LFO) and envelope generators.</li>
         </ul>
-      </div>
-      <input id="altdrum-releases" class="list-check" type="checkbox" />
-      <label class="list-label" for="altdrum-releases">Release notes</label>
-      <div class="list-content">
-        <ul>
-          <li>Changes in version 1.1.0 (May 2, 2020)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.1.0 (May 2, 2020)
           <ul>
             <li>UI color scheme is now based on Live theme/skin and improved visibility in dark themes...but wait, what's in the red LED??</li>
             <li>Fixed an issue where playing a track with automation for mode (ADSR / LINE) button makes undo histories.</li>
             <li>These changes do not alter automation settings. Live sets which include earlier versions are compatible.</li>
           </ul>
-          <li>A change in version 1.0.7 (March 2, 2020)</li>
+        </div>
+        <div class="history">
+          A change in version 1.0.7 (March 2, 2020)
           <ul>
             <li>Corrected small uneven alignments of UI.</li>
           </ul>
-          <li>Changes in version 1.0.6 (March 2, 2019)</li>
+        </div>
+        <div class="history">
+          Changes in version 1.0.6 (March 2, 2019)
           <ul>
             <li>Reduced retrigger delay of adsr~ to 1 msec from 10 msec. Now the initial state is ADSR mode which became more reliable.<br/>
               The previous version of device's mode in live sets and automation are not affected by this change of the initial state.</li>
             <li>Removed some redundant processes and reduced idling CPU use by about 9% off. (1.47% to 1.34% on Core i5-4570 processor)</li>
             <li>Removed the logic which was used to generate the rectangular wave sample but not used for the actual playback.<br/>
-              If you want to see the logic, you can download as another patch <a href=".\generateRectWave.maxpat">here</a>.</li>
+              If you want to see the logic, you can download as another patch <a href="./generateRectWave.maxpat">here</a>.</li>
             <li>Fixed an issue where changing SENSE is not reflected while playing.</li>
             <li>Fixed an issue where changing OUTPUT, SENSE, and SUSTAIN while playing cause noise.</li>
             <li>Fixed an issue where the sound was interrupted in the duration before the change if SUSTAIN was changed longer while sounding.</li>
           </ul>
-          <li>Version 1.0.0 : the first release (February 23, 2019)</li>
-        </ul>
-      </div>
-    </p>
-    <p>Special thanks to Mr. Tommy, the great predecessor who developed SDS2002.</p>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#eono">日本語</a></div>
-    <h2><span id="eono">echo on noteoff</span></h2>
-    <p><img src="eono.gif"><br/>
-      Download at <a href="https://maxforlive.com/library/device/5563/echo-on-noteoff">maxforlive.com</a>
-      (the last update: June 27, 2020 / version 1.0.0)</p>
-    <p>An experimental MIDI effect designed for notes in an arpeggio.<br/>
-      Put before built-in arpeggiator to acquire decaying effects in arpeggio notes!</p>
-    <input id="eono-param" class="list-check" type="checkbox">
-    <label class="list-label" for="eono-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        (ordered in the appearance of the automation control chooser list)
-        <li>Delay mode (Sync/Free): Switches whether delay offset of echo notes to the song tempo or calibrate it in milliseconds.</li>
-        <li>Delay (free/sync): Adjusts the delay offset time to start echo notes.</li>
-        <li>Duration mode (Sync/Free): Switches whether the duration of echo notes to the song tempo or calibrate it in milliseconds.</li>
-        <li>Delay (free/sync): Adjusts the duration time to start echo notes.</li>
-        <li>Feedback: Adjusts the ratio for the velocity of feedback echo notes.</li>
-        <li>Velocity: Adjusts the ratio for the velocity of the first echo note from note off.</li>
-        <li>Reset: Stop and disable all notes. Pressing the button always makes an undo history of Live.</li>
-        <li>Auto Stop: With it on, the device work as the specialized mode for use with Arpeggiator.<br/>
-          Echo notes are always stopped by receiving new notes, and actual note offs and the start of echo notes are suspended until all playing notes were off.</li>
-      </ul>
-    </div>
-    <input id="eono-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="eono-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>Due to some VSTi or MIDI instruments carry on the velocity of preceding continuous notes,
-          echoes may not be decayed or new MIDI notes might sounds low.<br/>
-          Sometimes other pitch notes' velocity may be carried in mono mode.<br/>
-          Setting Delay time about 40 msec might resolve these issues.</li>
-        <li>Echo notes would delay a few milliseconds when playing over 30 notes at a time.</li>
-      </ul>
-    </div>
-    <input id="eono-releases" class="list-check" type="checkbox" />
-    <label class="list-label" for="eono-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.0.0 (June 27, 2020)</li>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (February 23, 2019)</div>
+      </details>
+      <p>Special thanks to Mr. Tommy, the great predecessor who developed SDS2002.</p>
+    </section>
+    <section id="eono">
+      <div class="lang">English / <a href="./ja/#eono">日本語</a></div>
+      <h2>echo on noteoff</h2>
+      <header>
+        <p><img src="eono.gif" alt="The image of echo on noteoff device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/5563/echo-on-noteoff">maxforlive.com</a>
+          (the last update: June 27, 2020 / version 1.0.0)</p>
+        <p>An experimental MIDI effect designed for notes in an arpeggio.<br/>
+          Put before built-in arpeggiator to acquire decaying effects in arpeggio notes!</p>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Introduces new "Auto Stop" button as much specialized mode for use with Arpeggiator.<br/>
-            When the button is on, actual note offs and the start of echoes are suspended until all actual playing notes were off, and echoes are stopped by receiving any new notes.</li>
-          <li>Fixed an issue when echoes would not be stopped by receiving the same notes and new notes would not play correctly.</li>
-          <li>The internal note on velocity values are now calculated in float to prevent repeating echo notes endlessly.</li>
+          (ordered in the appearance of the automation control chooser list)
+          <li>Delay mode (Sync/Free): Switches whether delay offset of echo notes to the song tempo or calibrate it in milliseconds.</li>
+          <li>Delay (free/sync): Adjusts the delay offset time to start echo notes.</li>
+          <li>Duration mode (Sync/Free): Switches whether the duration of echo notes to the song tempo or calibrate it in milliseconds.</li>
+          <li>Delay (free/sync): Adjusts the duration time to start echo notes.</li>
+          <li>Feedback: Adjusts the ratio for the velocity of feedback echo notes.</li>
+          <li>Velocity: Adjusts the ratio for the velocity of the first echo note from note off.</li>
+          <li>Reset: Stop and disable all notes. Pressing the button always makes an undo history of Live.</li>
+          <li>Auto Stop: With it on, the device work as the specialized mode for use with Arpeggiator.<br/>
+            Echo notes are always stopped by receiving new notes, and actual note offs and the start of echo notes are suspended until all playing notes were off.</li>
         </ul>
-        <li>Changes in version 0.71 (April 8, 2020)</li>
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>UI color scheme is now based on Live theme/skin and improved visibility in dark themes.</li>
-          <li>Reset button is now available for automation and MIDI mapping. As a side effect, pressing Reset button always makes an undo history.</li>
+          <li>Due to some VSTi or MIDI instruments carry on the velocity of preceding continuous notes,
+            echoes may not be decayed or new MIDI notes might sounds low.<br/>
+            Sometimes other pitch notes' velocity may be carried in mono mode.<br/>
+            Setting Delay time about 40 msec might resolve these issues.</li>
+          <li>Echo notes would delay a few milliseconds when playing over 30 notes at a time.</li>
         </ul>
-        <li>Changes in version 0.50 (October 14, 2019)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.0.0 (June 27, 2020)
+          <ul>
+            <li>Introduces new "Auto Stop" button as much specialized mode for use with Arpeggiator.<br/>
+              When the button is on, actual note offs and the start of echoes are suspended until all actual playing notes were off, and echoes are stopped by receiving any new notes.</li>
+            <li>Fixed an issue when echoes would not be stopped by receiving the same notes and new notes would not play correctly.</li>
+            <li>The internal note on velocity values are now calculated in float to prevent repeating echo notes endlessly.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 0.71 (April 8, 2020)
+          <ul>
+            <li>UI color scheme is now based on Live theme/skin and improved visibility in dark themes.</li>
+            <li>Reset button is now available for automation and MIDI mapping. As a side effect, pressing Reset button always makes an undo history.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 0.50 (October 14, 2019)
+          <ul>
+            <li>Redefined the automation order. (Automapping Index)<br/>
+              Due to this change, Live sets which include the previous version are not compatible.</li>
+            <li>Delay time in Sync mode is now able to set no delay. (0)<br/>
+              The default of Delay time is now Sync mode and no delay.</li>
+          </ul>
+        </div>
+        <div class="history">Version 0.30 : the first release (July 1, 2019)</div>
+      </details>
+    </section>
+    <section id="bounce">
+      <div class="lang">English / <a href="./ja/#bounce">日本語</a></div>
+      <h2>bouncing notes</h2>
+      <header>
+        <p><img src="bouncingNotes.png" alt="The image of bouncing notes device"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br/>
+          Download at <a href="https://maxforlive.com/library/device/6075/bouncing-notes">maxforlive.com</a>
+          (the last update: April 8, 2022 / version 1.2.0)</p>
+        <p>*** This is not an official device. If you were looking for that, please visit <a href="https://www.ableton.com/packs/">https://www.ableton.com/packs/</a>. ***</p>
+        <p>While note on, generates repeating notes like bouncing table-tennis ball with dynamic display animation.<br/>
+          Simulates bounces from the levitation-ish on the Moon to fierce conditions of 60G.<br/>
+          And available in polyphonic and inverse mode!</p>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Redefined the automation order. (Automapping Index)<br/>
-            Due to this change, Live sets which include the previous version are not compatible.</li>
-          <li>Delay time in Sync mode is now able to set no delay. (0)<br/>
-            The default of Delay time is now Sync mode and no delay.</li>
+          <li>Gravity: Represents the gravity; how fast the velocity of balls decreases.</li>
+          <li>Velocity: The initial velocity of balls. 20 means to set 100*20m/msec. 100 means 2m/sec.</li>
+          <li>Rebound: Represents the coefficient of restitution. It's often written 'e'.
+            As increasing Rebound, the velocity of echo notes decreases slower.</li>
+          <li>Vel D/W: Represents Velocity Dry/Wet ratio as known as velocity sensitivity.</li>
+          <li>Duration: Adjusts the ratio between the duration time of echo notes and bounces.</li>
+          <li>Minimum: The minimum bouncing time. It depends on 'HOLD' switch the behavior at the duration between bounces reached Minimum.</li>
+          <li>HOLD: When enabled, bouncing notes continue after the duration of bounces reached 'Minimum' time.<br/>
+            When disabled, bounces end at duration time of bounces reached 'Minimum' time.</li>
+          <li>DISP: Enable or disable the dynamic display animation.</li>
+          <li>Inverse: When enabled, the bounces are inverted; the duration of notes increases.<br/>
+            TIP: When inverse mode, you can start bounces from shorter duration by setting 'Velocity' to a small number (2-3).</li>
         </ul>
-        <li>Version 0.30 : the first release (July 1, 2019)</li>
-      </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#bounce">日本語</a></div>
-    <h2><span id="bounce">bouncing notes</span></h2>
-    <p><img src="bouncingNotes.png"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br/>
-      Download at <a href="https://maxforlive.com/library/device/6075/bouncing-notes">maxforlive.com</a>
-      (the last update: April 8, 2022 / version 1.2.0)</p>
-    <p>*** This is not an official device. If you were looking for that, please visit <a href="https://www.ableton.com/packs/">https://www.ableton.com/packs/</a>. ***</p>
-    <p>While note on, generates repeating notes like bouncing table-tennis ball with dynamic display animation.<br/>
-      Simulates bounces from the levitation-ish on the Moon to fierce conditions of 60G.<br/>
-      And available in polyphonic and inverse mode!</p>
-    <input id="bnotes-param" class="list-check" type="checkbox" />
-    <label class="list-label" for="bnotes-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        <li>Gravity: Represents the gravity; how fast the velocity of balls decreases.</li>
-        <li>Velocity: The initial velocity of balls. 20 means to set 100*20m/msec. 100 means 2m/sec.</li>
-        <li>Rebound: Represents the coefficient of restitution. It's often written 'e'.
-          As increasing Rebound, the velocity of echo notes decreases slower.</li>
-        <li>Vel D/W: Represents Velocity Dry/Wet ratio as known as velocity sensitivity.</li>
-        <li>Duration: Adjusts the ratio between the duration time of echo notes and bounces.</li>
-        <li>Minimum: The minimum bouncing time. It depends on 'HOLD' switch the behavior at the duration between bounces reached Minimum.</li>
-        <li>HOLD: When enabled, bouncing notes continue after the duration of bounces reached 'Minimum' time.<br/>
-          When disabled, bounces end at duration time of bounces reached 'Minimum' time.</li>
-        <li>DISP: Enable or disable the dynamic display animation.</li>
-        <li>Inverse: When enabled, the bounces are inverted; the duration of notes increases.<br/>
-          TIP: When inverse mode, you can start bounces from shorter duration by setting 'Velocity' to a small number (2-3).</li>
-      </ul>
-    </div>
-    <input id="bnotes-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="bnotes-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>While notes playing, changing some parameters does not effect until the next bound, not in real-time.<br/>
-          It is necessary to change most of the patch code (the way to manage by CPU time such as Note Echo in Max for Live Essentials) for correcting this issue,<br/>
-          however, no one might want to manipulate gravity in real-time.</li>
-        <li>Playing many notes at a time causes some CPU usage. (might be caused by the instruments after this device)<br/>
-          Disabling DISP switch may reduce CPU usage.</li>
-      </ul>
-    </div>
-    <input id="bnotes-releases" class="list-check" type="checkbox" />
-    <label class="list-label" for="bnotes-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.2.0 (April 8, 2022)</li>
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>Refined graphic rendering method migrated from lcd to jsui object. This allows features below.
-            <ul>
-              <li>The balls have better color schemes for conditions in user Lives themes or adjusted brightness.</li>
-              <li>When the inverse mode, the balls go in the opposite direction.</li>
-              <li>When the balls reached outside of the display, they appear from another side to keep visible.</li>
-              <li>Less CPU usage and more accuracy when lots of poly notes.</li>
-            </ul>
-          </li>
-          <li>Fixed an issue when internal velocity may go far below 1 and it needs much time to recover velocity after the inverse mode was enabled.</li>
+          <li>While notes playing, changing some parameters does not effect until the next bound, not in real-time.<br/>
+            It is necessary to change most of the patch code (the way to manage by CPU time such as Note Echo in Max for Live Essentials) for correcting this issue,<br/>
+            however, no one might want to manipulate gravity in real-time.</li>
+          <li>Playing many notes at a time causes some CPU usage. (might be caused by the instruments after this device)<br/>
+            Disabling DISP switch may reduce CPU usage.</li>
         </ul>
-        <li>Changes in version 1.1.0 (February 23, 2021)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.2.0 (April 8, 2022)
+          <ul>
+            <li>Refined graphic rendering method migrated from lcd to jsui object. This allows features below.</li>
+            <li>The balls have better color schemes for conditions in user Lives themes or adjusted brightness.</li>
+            <li>When the inverse mode, the balls go in the opposite direction.</li>
+            <li>When the balls reached outside of the display, they appear from another side to keep visible.</li>
+            <li>Less CPU usage and more accuracy when lots of poly notes.</li>
+            <li>Fixed an issue when internal velocity may go far below 1 and it needs much time to recover velocity after the inverse mode was enabled.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.1.0 (February 23, 2021)
+          <ul>
+            <li>Added the inverted bouncing feature at last! The bouncing is inverted when Inv. button is on.<br/>
+              Each time pressing Inv. button makes undo histories.
+              So it is recommended to automate Inv. button when it is toggled repeatedly.</li>
+            <li>Added Velocity parameter to adjust the initial velocity (of balls).<br/>
+              Setting the Velocity value low works effectively with the inverted mode.<br/>
+              Also adjusted the UI including other parameter's font.</li>
+            <li>Changed he initial value of Minimum to 50msec from 100msec.</li>
+            <li>These changes do not affect Live sets which use the device of previous versions.</li>
+            <li>Changed notation method of the version to semantic versioning.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.04 (March 23, 2020)
+          <ul>
+            <li>Fixed the display problem in Max 8 by changing HOLD and DISP button to default display mode from label display mode.</li>
+            <li>Reduced CPU usage when parameters are automated by &quot;defer automation output&quot; option.</li>
+            <li>Refined the animation logic so that draws accurately when changing parameters and slightly reduced overall CPU usage.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.00: the first release (March 21, 2020)</div>
+      </details>
+    </section>
+    <section id="pitchwc">
+      <div class="lang">English / <a href="./ja/#pitchwc">日本語</a></div>
+      <h2>PitchW curve</h2>
+      <header>
+        <p><img src="pitchwc.gif" alt="The image of PitchW curve device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/6327/pitchw-curve">maxforlive.com</a>
+          (the last update: December 19, 2021 / version 1.3.0)</p>
+        <p>A simple MIDI effect which generates pitch bend message curves with note on.<br/>
+          Suitable for bending down synth percussion sounds in drum rack.<br/>
+          Based on the device <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">"PitchW ADSR" by LAEX</a> with additional features below.</p>
         <ul>
-          <li>Added the inverted bouncing feature at last! The bouncing is inverted when Inv. button is on.<br/>
-            Each time pressing Inv. button makes undo histories.
-            So it is recommended to automate Inv. button when it is toggled repeatedly.</li>
-          <li>Added Velocity parameter to adjust the initial velocity (of balls).<br/>
-            Setting the Velocity value low works effectively with the inverted mode.<br/>
-            Also adjusted the UI including other parameter's font.</li>
-          <li>Changed he initial value of Minimum to 50msec from 100msec.</li>
-          <li>These changes do not affect Live sets which use the device of previous versions.</li>
-          <li>Changed notation method of the version to semantic versioning.</li>
+          <li>Adjustable pitch bend range in 14bit-precise values (-8192 to 8191)</li>
+          <li>Can adjust delay time to start pitch bend curve from note on.</li>
+          <li>The pitch bend curve can be linear, exponential, or logarithmic.</li>
+          <li>Dynamic visual display which represents pitch bend value and adjusts the range of the pitch bend curve.</li>
         </ul>
-        <li>Changes in version 1.04 (March 23, 2020)</li>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Fixed the display problem in Max 8 by changing HOLD and DISP button to default display mode from label display mode.</li>
-          <li>Reduced CPU usage when parameters are automated by &quot;defer automation output&quot; option.</li>
-          <li>Refined the animation logic so that draws accurately when changing parameters and slightly reduced overall CPU usage.</li>
+          <li>From: Adjusts the initial pitch bend value at note on.</li>
+          <li>To: Adjust the target value of the pitch bend curve.</li>
+          <li>Exp. (Exponent): Adjusts exponent value for pitch bend curve.<br/>
+            1.00: linear, over 1.00: exponential, below 1.00: logarithmic.</li>
+          <li>Delay mode: Switches the sustain time mode between beat synced and time-based.</li>
+          <li>Delay time: Adjusts delay time to start pitch bend curve from note on in note length or milliseconds.</li>
+          <li>Sustain mode: Switches the sustain time mode between beat synced and time-based.</li>
+          <li>Sustain time: Adjusts the duration of pitch bend curve in note length or milliseconds.</li>
+          <li>Legato: When enabled, the curve wouldn't start with note on while playing at least one note. Suitable for playing with poly notes.</li>
+          <li>Pitch Bend Monitor: Displays the range and the current value of pitch bend. Dragging bracket shapes changes the range.<br/>
+            Shift+drag can adjust finely. Cmd/ctrl+drag changes in 25 steps (+/- 12 steps and zero). 129 steps with shift+cmd/ctrl (+/- 64 steps and zero).</li>
         </ul>
-        <li>Version 1.00: the first release (March 21, 2020)</li>
-      </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#pitchwc">日本語</a></div>
-    <h2><span id="pitchwc">PitchW curve</span></h2>
-    <p><img src="pitchwc.gif"><br/>
-      Download at <a href="https://maxforlive.com/library/device/6327/pitchw-curve">maxforlive.com</a>
-      (the last update: December 19, 2021 / version 1.3.0)</p>
-    <p>A simple MIDI effect which generates pitch bend message curves with note on.<br/>
-      Suitable for bending down synth percussion sounds in drum rack.<br/>
-      Based on the device <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">"PitchW ADSR" by LAEX</a> with additional features below.</p>
-    <ul>
-      <li>Adjustable pitch bend range in 14bit-precise values (-8192 to 8191)</li>
-      <li>Can adjust delay time to start pitch bend curve from note on.</li>
-      <li>The pitch bend curve can be linear, exponential, or logarithmic.</li>
-      <li>Dynamic visual display which represents pitch bend value and adjusts the range of the pitch bend curve.</li>
-    </ul>
-    <input id="pitchwc-param" class="list-check" type="checkbox" />
-    <label class="list-label" for="pitchwc-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        <li>From: Adjusts the initial pitch bend value at note on.</li>
-        <li>To: Adjust the target value of the pitch bend curve.</li>
-        <li>Exp. (Exponent): Adjusts exponent value for pitch bend curve.<br/>
-           1.00: linear, over 1.00: exponential, below 1.00: logarithmic.</li>
-        <li>Delay mode: Switches the sustain time mode between beat synced and time-based.</li>
-        <li>Delay time: Adjusts delay time to start pitch bend curve from note on in note length or milliseconds.</li>
-        <li>Sustain mode: Switches the sustain time mode between beat synced and time-based.</li>
-        <li>Sustain time: Adjusts the duration of pitch bend curve in note length or milliseconds.</li>
-        <li>Legato: When enabled, the curve wouldn't start with note on while playing at least one note. Suitable for playing with poly notes.</li>
-        <li>Pitch Bend Monitor: Displays the range and the current value of pitch bend. Dragging bracket shapes changes the range.<br/>
-          Shift+drag can adjust finely. Cmd/ctrl+drag changes in 25 steps (+/- 12 steps and zero). 129 steps with shift+cmd/ctrl (+/- 64 steps and zero).</li>
-      </ul>
-    </div>
-    <input id="pitchwc-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="pitchwc-issues">Precautions for use and known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>Not available for up-down curves like ADSR. If you want to, please check <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">the original</a>.</li>
-        <li>The device ignores all incoming pitch bend messages.</li>
-        <li>The device outputs pitch bend messages every 1 msec.<br/>
-          If the time interval of messages is too short for such as hardware midi instruments,<br/>
-          you can adjust by the 'Interval' value.</li> 
-        <li>With Shift+drag, You can adjust the range finely, however, the position of mouse pointer exceeds the display area of the device.</li>
-        <li>In Max 6, 'To' value seems '0' when the device was added to MIDI track. It works as -8192 as the pitch bend monitor shows.</li>
-      </ul>
-    </div>
-    <input id="pitchwc-releases" class="list-check" type="checkbox" />
-    <label class="list-label" for="pitchwc-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.3.1 (December 19, 2021)</li>
+      </details>
+      <details open>
+        <summary>Precautions for use and known issues</summary>
+        <div class="list-content">
+          <ul>
+            <li>Not available for up-down curves like ADSR. If you want to, please check <a href="https://maxforlive.com/library/device/3904/pitchw-adsr">the original</a>.</li>
+            <li>The device ignores all incoming pitch bend messages.</li>
+            <li>The device outputs pitch bend messages every 1 msec.<br/>
+              If the time interval of messages is too short for such as hardware midi instruments,<br/>
+              you can adjust by the 'Interval' value.</li> 
+            <li>With Shift+drag, You can adjust the range finely, however, the position of mouse pointer exceeds the display area of the device.</li>
+            <li>In Max 6, 'To' value seems '0' when the device was added to MIDI track. It works as -8192 as the pitch bend monitor shows.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.3.1 (December 19, 2021)
+          <ul>
+            <li>Added "Legato" button for playing with poly notes. When enabled, the curve wouldn't start with note on while playing at least one note.</li>
+            <li>Dragging bracket shapes in the pitch bend monitor with cmd/ctrl changes in 25 steps (+/- 12 steps and zero). 129 steps with shift+cmd/ctrl (+/- 64 steps and zero).</li>
+            <li>Added LED indicator lit when received note on. (for space-holder)</li>
+            <li>Fixed a typo in Sustain value.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.2.0 (October 30, 2021)
+          <ul>
+            <li>Now you can change the range of the pitch bend curve by dragging bracket shapes in the pitch bend monitor. Shift+drag can adjust finely.</li>
+            <li>Added "Interval" number box to adjust the interval of pitch bend MIDI messages.</li>
+            <li>Now pitch bend curve stops when the device was inactivated and does not continue after activation.</li>
+            <li>And some UI tweaks.</li>
+            <li>These changes do not affect Live sets using the previous version.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (May 27, 2020)</div>
+      </details>
+    </section>
+    <section id="afmacro">
+      <div class="lang">English / <a href="./ja/#afmacro">日本語</a></div>
+      <h2>Audio Frame Macro</h2>
+      <header>
+        <p><img src="afmacro.png" alt="The image of Audio Frame Macro device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/6678/audio-frame-macro">maxforlive.com</a>
+          (the last update: January 10, 2022 / version 1.3.2)</p>
+        <p>Audio effect device to modulate parameters in integer values and PAL/NTSC like interlace frame rates.<br/>
+          Deeply influenced by tracker software and chiptune plugins.</p>
+        <h3>Features</h3>
         <ul>
-          <li>Added "Legato" button for playing with poly notes. When enabled, the curve wouldn't start with note on while playing at least one note.</li>
-          <li>Dragging bracket shapes in the pitch bend monitor with cmd/ctrl changes in 25 steps (+/- 12 steps and zero). 129 steps with shift+cmd/ctrl (+/- 64 steps and zero).</li>
-          <li>Added LED indicator lit when received note on. (for space-holder)</li>
-          <li>Fixed a typo in Sustain value.</li>
+          <li>Designed to modulate integer parameters such as semitone, octave and waveform types in instrument devices or plugins.</li>
+          <li>Also able to modulate float-value parameters by scaled values.</li>
+          <li>4 parameters can be mapped to individual modulations, which sync to the master clock of the device.</li>
+          <li>Able to receive MIDI notes to start from the first step again by routing MIDI channel. (only available since Live 11)</li>
         </ul>
-        <li>Changes in version 1.2.0 (October 30, 2021)</li>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Now you can change the range of the pitch bend curve by dragging bracket shapes in the pitch bend monitor. Shift+drag can adjust finely.</li>
-          <li>Added "Interval" number box to adjust the interval of pitch bend MIDI messages.</li>
-          <li>Now pitch bend curve stops when the device was inactivated and does not continue after activation.</li>
-          <li>And some UI tweaks.</li>
-          <li>These changes do not affect Live sets using the previous version.</li>
+          <li>ClockMode: Switches the clock rate in Hz or note-related.</li>
+          <li>ClockFrequency: Adjusts the clock frequency in Hz.<br/>
+            Actual speed is doubled to simulate interlaced frames. 29.97Hz: NTSC, 25Hz: PAL.</li>
+          <li>CLockRate: Adjusts the clock rate with note-related speed.</li>
+          <li>ParameterSelector (below Clock): Switches from 4 individual parameter macros.</li>
+          <li>Resync: When pressed, reset all current position of parameter macros to sync again.<br/>
+            Pressing the button always makes an undo history of Live.<br/>
+            TIP: Setting automation to Resync makes attack effect without MIDI input.</li>
+          <br/>belows are included in each individual parameter macro.
+          <li>Loop Selector (above sliders): Adjusts the loop position.</li>
+          <li>Sliders: Adjust each modulation value per frame.</li>
+          <li>Values (below sliders): Indicate each modulation value. Able to adjust and be automated.<br/>
+            The value can exceed Input Range, but the actual modulation value does not.</li>
+          <li>Cycle / Step: Adjusts the number of cycles needed to proceed with each steps. Larger steps make slower progress.</li>
+          <li>Input Range: Adjusts the minimum/maximum value of each sliders.</li>
+          <li>Scale (S): When enabled, the device scales modulation value to the range of modulated parameters.<br/>
+            Suitable for parameters in float.</li>
+          <li>Fit: When pressed, fits the values of Input Range to the range of modulated parameter.<br/>
+            Suitable for parameters in integer. Available only when the parameter for modulation is mapped.</li>
+          <li>0-7F: When pressed, sets input range to [0, 127 (0x7F)].<br/>
+            Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
+          <li>+/-: When pressed, sets input range to [-64, 63]. Suitable for bipolar parameters such as pan.<br/>
+            Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
+          <li>Map: When pressed, activates mapping mode. You can click a mappable parameter in Live to select as the mapped parameter to modulate.<br/>
+            The mapped parameter name is displayed in right of Unmap button (x).</li>
+          <li>Unmap (x): When pressed, cancel the mapping of parameter.</li>
         </ul>
-        <li>Version 1.0.0 : the first release (May 27, 2020)</li>
-      </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#afmacro">日本語</a></div>
-    <h2><span id="afmacro">Audio Frame Macro</span></h2>
-    <p><img src="afmacro.png"><br/>
-      Download at <a href="https://maxforlive.com/library/device/6678/audio-frame-macro">maxforlive.com</a>
-      (the last update: January 10, 2022 / version 1.3.2)</p>
-    <p>Audio effect device to modulate parameters in integer values and PAL/NTSC like interlace frame rates.<br/>
-      Deeply influenced by tracker software and chiptune plugins.</p>
-    <p>Features
-      <ul>
-        <li>Designed to modulate integer parameters such as semitone, octave and waveform types in instrument devices or plugins.</li>
-        <li>Also able to modulate float-value parameters by scaled values.</li>
-        <li>4 parameters can be mapped to individual modulations, which sync to the master clock of the device.</li>
-        <li>Able to receive MIDI notes to start from the first step again by routing MIDI channel. (only available since Live 11)</li>
-      </ul>
-    </p>
-    <input id="afmacro-param" class="list-check" type="checkbox" />
-    <label class="list-label" for="afmacro-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        <li>ClockMode: Switches the clock rate in Hz or note-related.</li>
-        <li>ClockFrequency: Adjusts the clock frequency in Hz.<br/>
-          Actual speed is doubled to simulate interlaced frames. 29.97Hz: NTSC, 25Hz: PAL.</li>
-        <li>CLockRate: Adjusts the clock rate with note-related speed.</li>
-        <li>ParameterSelector (below Clock): Switches from 4 individual parameter macros.</li>
-        <li>Resync: When pressed, reset all current position of parameter macros to sync again.<br/>
-          Pressing the button always makes an undo history of Live.<br/>
-          TIP: Setting automation to Resync makes attack effect without MIDI input.</li>
-        <br/>belows are included in each individual parameter macro.
-        <li>Loop Selector (above sliders): Adjusts the loop position.</li>
-        <li>Sliders: Adjust each modulation value per frame.</li>
-        <li>Values (below sliders): Indicate each modulation value. Able to adjust and be automated.<br/>
-          The value can exceed Input Range, but the actual modulation value does not.</li>
-        <li>Cycle / Step: Adjusts the number of cycles needed to proceed with each steps. Larger steps make slower progress.</li>
-        <li>Input Range: Adjusts the minimum/maximum value of each sliders.</li>
-        <li>Scale (S): When enabled, the device scales modulation value to the range of modulated parameters.<br/>
-          Suitable for parameters in float.</li>
-        <li>Fit: When pressed, fits the values of Input Range to the range of modulated parameter.<br/>
-          Suitable for parameters in integer. Available only when the parameter for modulation is mapped.</li>
-        <li>0-7F: When pressed, sets input range to [0, 127 (0x7F)].<br/>
-          Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
-        <li>+/-: When pressed, sets input range to [-64, 63]. Suitable for bipolar parameters such as pan.<br/>
-          Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
-        <li>Map: When pressed, activates mapping mode. You can click a mappable parameter in Live to select as the mapped parameter to modulate.<br/>
-          The mapped parameter name is displayed in right of Unmap button (x).</li>
-        <li>Unmap (x): When pressed, cancel the mapping of parameter.</li>
-      </ul>
-    </div>
-    <input id="afmacro-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="afmacro-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>The clock rate does not affect completely perfect to the actual rate due to internal buffer of modulated devices and Live itself. (10 to 20+ samples in sampling rate = 44.1kHz)</li>
-        <li>Might not work as stepwise modulation for parameters such as output volumes which continuously vary in a few mill seconds by changing values.</li>
-        <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br/>
-          Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
-        <li>Resync button can be automated, however, pressing the button always makes undo histories as a side effect.</li>
-        <li>The values below sliders might exceed the input range, however, he actual values in modulation are limited by the input range.</li>
-      </ul>
-    </div>
-    <input id="afmacro-releases" class="list-check" type="checkbox" />
-    <label class="list-label" for="afmacro-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.3.2 (January 10, 2022)</li>
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>Fixed grammar mistakes in info view for text boxes.</li>
+          <li>The clock rate does not affect completely perfect to the actual rate due to internal buffer of modulated devices and Live itself. (10 to 20+ samples in sampling rate = 44.1kHz)</li>
+          <li>Might not work as stepwise modulation for parameters such as output volumes which continuously vary in a few mill seconds by changing values.</li>
+          <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br/>
+            Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
+          <li>Resync button can be automated, however, pressing the button always makes undo histories as a side effect.</li>
+          <li>The values below sliders might exceed the input range, however, he actual values in modulation are limited by the input range.</li>
         </ul>
-        <li>Changes in version 1.3.1 (May 11, 2021)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.3.2 (January 10, 2022)
+          <ul>
+            <li>Fixed grammar mistakes in info view for text boxes.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.3.1 (May 11, 2021)
+          <ul>
+            <li>Fixed an issue when sliders before the position of loop start look dark and inactive.</li>
+            <li>Fixed an issue when the values below sliders cannot display properly when the value is -100 or less.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.3.0 (February 26, 2021)
+          <ul>
+            <li>Now able to route from 'MIDI To'. (only for Live 11.0 or later) The modulation restarts when the device receives note on like hitting the Resync button.</li>
+            <li>Fixed an issue when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</li>
+            <li>Fixed an issue when mapping parameter might not work with certain conditions.</li>
+            <li>Changed the automation parameter list order. This change does not affect Live sets which use previous versions.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.2.1 (December 13, 2020)
+          <ul>
+            <li>Added Live standard loop selector which can adjust start position of the loop. Loop start/end position is also able to be automated.<br/>
+              The values of sliders before the loop start position only work when hitting Resync button.</li>
+            <li>The phase of the master clock restarts by hitting Resync button thus the first frame modulates in proper duration.</li>
+            <li><s>Fixed an issue when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</s><br/>
+              Not fixed in this version due to a mistake. So sorry for the inconvenience.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (Nov 8, 2020)</div>
+      </details>
+    </section>
+    <section id="mfmacro">
+      <div class="lang">English / <a href="./ja/#mfmacro">日本語</a></div>
+      <h2>MIDI Frame Macro</h2>
+      <header>
+        <p><img src="mfmacro.png" alt="The image of MIDI Frame Macro device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/6763">maxforlive.com</a>
+          (the last update: January 10, 2022 / version 1.3.2)</p>
+        <p>MIDI effect device to modulate parameters in integer values and PAL/NTSC like interlace frame rates.<br/>
+          Just a MIDI version of Audio Frame Macro.</p>
+        <h3>Features</h3>
         <ul>
-          <li>Fixed an issue when sliders before the position of loop start look dark and inactive.</li>
-          <li>Fixed an issue when the values below sliders cannot display properly when the value is -100 or less.</li>
+          <li>In addition to Audio Frame Macro, each modulation restarts in sync with note on.<br/>
+            The adjustable loop selector makes effects for attack and long notes.</li>
         </ul>
-        <li>Changes in version 1.3.0 (February 26, 2021)</li>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Now able to route from 'MIDI To'. (only for Live 11.0 or later) The modulation restarts when the device receives note on like hitting the Resync button.</li>
-          <li>Fixed an issue when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</li>
-          <li>Fixed an issue when mapping parameter might not work with certain conditions.</li>
-          <li>Changed the automation parameter list order. This change does not affect Live sets which use previous versions.</li>
+          <li>ClockMode: Switches the clock rate in Hz or note-related.</li>
+          <li>ClockFrequency: Adjusts the clock frequency in Hz.<br/>
+            Actual speed is doubled to simulate interlaced frames. 29.97Hz: NTSC, 25Hz: PAL.</li>
+          <li>CLockRate: Adjusts the clock rate with note-related speed.</li>
+          <li>ParameterSelector (below Clock): Switches from 4 individual parameter macros.</li>
+          <br/>belows are included in each individual parameter macro.
+          <li>Loop Selector (above sliders): Adjusts the loop position.</li>
+          <li>Sliders: Adjust each modulation value per frame.</li>
+          <li>Values (below sliders): Indicate each modulation value. Able to adjust and be automated.<br/>
+            The value can exceed Input Range, but the actual modulation value does not.</li>
+          <li>Cycle / Step: Adjusts the number of cycles needed to proceed with each steps. Larger steps make slower progress.</li>
+          <li>Input Range: Adjusts the minimum/maximum value of each sliders.</li>
+          <li>Scale (S): When enabled, the device scales modulation value to the range of modulated parameters.<br/>
+            Suitable for parameters in float.</li>
+          <li>Fit: When pressed, fits the values of Input Range to the range of modulated parameter.<br/>
+            Suitable for parameters in integer. Available only when the parameter in number is mapped.</li>
+          <li>0-7F: When pressed, sets input range to [0, 127 (0x7F)].
+            Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
+          <li>+/-: When pressed, sets input range to [-64, 63]. Suitable for bipolar parameters such as pan.<br/>
+            Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
+          <li>Map: When pressed, activates mapping mode. You can click a mappable parameter in Live to select as the mapped parameter to modulate.<br/>
+            The mapped parameter name is displayed in right of Unmap button (x).</li>
+          <li>Unmap (x): When pressed, cancel the mapping of parameter.</li>
         </ul>
-        <li>Changes in version 1.2.1 (December 13, 2020)</li>
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>Added Live standard loop selector which can adjust start position of the loop. Loop start/end position is also able to be automated.<br/>
-            The values of sliders before the loop start position only work when hitting Resync button.</li>
-          <li>The phase of the master clock restarts by hitting Resync button thus the first frame modulates in proper duration.</li>
-          <li><s>Fixed an issue when automation set to values might be cancelled by changing the loop position and slider values even those are different sliders from ones to automate.</s><br/>
-            Not fixed in this version due to a mistake. So sorry for the inconvenience.</li>
+          <li>Sliders before the position of loop start look dark and inactive. Those are actually active with every note on.</li>
+          <li>Most instrument devices sound with a few milliseconds delay from note on to prevent clip noises. Thus first frames would be applied shorter.<br/>
+            It is effective that by increasing frames before loop start position or the value of Cycle/Step for clear attack effect.</li>
+          <li>The clock rate does not affect completely perfect to the actual rate due to internal buffer of modulated devices and Live itself.</li>
+          <li>Might not work as stepwise modulation for parameters which continuously varies in a few mill seconds.</li>
+          <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br/>
+            Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
+          <li>The value below of each slider cannot display properly when the value is -100 or less. It is not assumed to use with values under -64.</li>
         </ul>
-        <li>Version 1.0.0 : the first release (Nov 8, 2020)</li>
-      </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#mfmacro">日本語</a></div>
-    <h2><span id="mfmacro">MIDI Frame Macro</span></h2>
-    <p><img src="mfmacro.png"><br/>
-      Download at <a href="https://maxforlive.com/library/device/6763">maxforlive.com</a>
-      (the last update: January 10, 2022 / version 1.3.2)</p>
-    <p>MIDI effect device to modulate parameters in integer values and PAL/NTSC like interlace frame rates.<br/>
-    Just a MIDI version of Audio Frame Macro.</p>
-    <p>Features
-      <ul>
-        <li>In addition to Audio Frame Macro, each modulation restarts in sync with note on.<br/>
-          The adjustable loop selector makes effects for attack and long notes.</li>
-      </ul>
-    </p>
-    <input id="mfmacro-param" class="list-check" type="checkbox" />
-    <label class="list-label" for="mfmacro-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        <li>ClockMode: Switches the clock rate in Hz or note-related.</li>
-        <li>ClockFrequency: Adjusts the clock frequency in Hz.<br/>
-          Actual speed is doubled to simulate interlaced frames. 29.97Hz: NTSC, 25Hz: PAL.</li>
-        <li>CLockRate: Adjusts the clock rate with note-related speed.</li>
-        <li>ParameterSelector (below Clock): Switches from 4 individual parameter macros.</li>
-        <br/>belows are included in each individual parameter macro.
-        <li>Loop Selector (above sliders): Adjusts the loop position.</li>
-        <li>Sliders: Adjust each modulation value per frame.</li>
-        <li>Values (below sliders): Indicate each modulation value. Able to adjust and be automated.<br/>
-          The value can exceed Input Range, but the actual modulation value does not.</li>
-        <li>Cycle / Step: Adjusts the number of cycles needed to proceed with each steps. Larger steps make slower progress.</li>
-        <li>Input Range: Adjusts the minimum/maximum value of each sliders.</li>
-        <li>Scale (S): When enabled, the device scales modulation value to the range of modulated parameters.<br/>
-          Suitable for parameters in float.</li>
-        <li>Fit: When pressed, fits the values of Input Range to the range of modulated parameter.<br/>
-          Suitable for parameters in integer. Available only when the parameter in number is mapped.</li>
-        <li>0-7F: When pressed, sets input range to [0, 127 (0x7F)].
-          Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
-        <li>+/-: When pressed, sets input range to [-64, 63]. Suitable for bipolar parameters such as pan.<br/>
-          Unavailable when the parameter without number is mapped. (on/off or enumerations)</li>
-        <li>Map: When pressed, activates mapping mode. You can click a mappable parameter in Live to select as the mapped parameter to modulate.<br/>
-          The mapped parameter name is displayed in right of Unmap button (x).</li>
-        <li>Unmap (x): When pressed, cancel the mapping of parameter.</li>
-      </ul>
-    </div>
-    <input id="mfmacro-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="mfmacro-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>Sliders before the position of loop start look dark and inactive. Those are actually active with every note on.</li>
-        <li>Most instrument devices sound with a few milliseconds delay from note on to prevent clip noises. Thus first frames would be applied shorter.<br/>
-          It is effective that by increasing frames before loop start position or the value of Cycle/Step for clear attack effect.</li>
-        <li>The clock rate does not affect completely perfect to the actual rate due to internal buffer of modulated devices and Live itself.</li>
-        <li>Might not work as stepwise modulation for parameters which continuously varies in a few mill seconds.</li>
-        <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br/>
-          Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
-        <li>The value below of each slider cannot display properly when the value is -100 or less. It is not assumed to use with values under -64.</li>
-      </ul>
-    </div>
-    <input id="mfmacro-releases" class="list-check" type="checkbox" />
-    <label class="list-label" for="mfmacro-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.3.2 (January 10, 2022)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.3.2 (January 10, 2022)
+          <ul>
+            <li>Fixed grammar mistakes in info view for text boxes.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.3.1 (May 11, 2021)
+          <ul>
+            <li>Fixed an issue when sliders before the position of loop start look dark and inactive.</li>
+            <li>Fixed an issue when the values below sliders cannot display properly when the value is -100 or less.</li>
+            <li>The version number is adapted to AudioFrameMacro, the derived origin device.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.0.2 (February 27, 2021)
+          <ul>
+            <li>Fixed an issue when mapping parameter might not work with certain conditions.</li>
+          </ul>
+        </div>
+        <div class="history">
+          Changes in version 1.0.1 (December 13, 2020)
+          <ul>
+            <li>Fixed the issues when automation set to values might be cancelled and the modulation does not work properly by changing the loop position and slider values even those are different sliders from ones to automate.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (December 6, 2020)</div>
+      </details>
+    </section>
+    <section id="retronome">
+      <div class="lang">English / <a href="./ja/#retronome">日本語</a></div>
+      <h2>Retro-nome</h2>
+      <header>
+        <p><img src="retronome.gif" alt="The image of Retro-nome device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/6723">maxforlive.com</a>
+          (the last update: November 13, 2021 / version 1.0.1)</p>
+        <p>A simple visualization to support syncing sequencer's tempo for live performers. No parameters.</p>
+      </header>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>Fixed grammar mistakes in info view for text boxes.</li>
+          <li>The number of bars and beats may be wrong in Live set with Time Signature Changes.</li>
+          <li>Cannot display the number of bars accurately over a 10 thousand bars.</li>
         </ul>
-        <li>Changes in version 1.3.1 (May 11, 2021)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.0.1 (November 13, 2021)
+          <ul>
+            <li>Renovated drawing function from lcd to jsui. Improved drawing in fast tempo and reduced CPU usage.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (November 22, 2020)</div>
+      </details>
+    </section>
+    <section id="audioAdsr">
+      <div class="lang">English / <a href="./ja/#audioAdsr">日本語</a></div>
+      <h2>Audio ADSR</h2>
+      <header>
+        <p><img src="AudioADSR.png" alt="The image of Audio ADSR device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/7508">maxforlive.com</a>
+          (the last update: April 23, 2022 / version 1.1.0)</p>
+        <p>A super simple ADSR enveloper for audio tracks.<br/>
+          Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Fixed an issue when sliders before the position of loop start look dark and inactive.</li>
-          <li>Fixed an issue when the values below sliders cannot display properly when the value is -100 or less.</li>
-          <li>The version number is adapted to AudioFrameMacro, the derived origin device.</li>
+          <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
+          <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br/>
+            Available only when MIDI Input Type has selectable channels.</li>
+          <li>here: When pressed, MIDI Input will be routed to the track which the device belongs if the track is a MIDI track.</li>
+          <li>Attack: Adjusts the Attack time of the envelope.</li>
+          <li>Decay: Adjusts the Decay time of the envelope.</li>
+          <li>Sustain: Adjusts the Sustain volume of the envelope.</li>
+          <li>Release: Adjusts the Release time of the envelope, literally.</li>
+          <li>V. Sense: Adjusts the velocity sensitivity for the envelope's amplitude.</li>
+          <li>Curve: Adjust the Curvature of the envelope.</li>
+          <li>Dry/Wet: Adjust the ratio of processed sound and raw sound.<br/>
+            TIP: setting negative value produces like sidechain-compressed effect.</li>
+          <li>Legato: When enabled, the envelope wouldn't start with note on while playing at least one note.</li>
         </ul>
-        <li>Changes in version 1.0.2 (February 27, 2021)</li>
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>Fixed an issue when mapping parameter might not work with certain conditions.</li>
+          <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
         </ul>
-        <li>Changes in version 1.0.1 (December 13, 2020)</li>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.1.0 (April 23, 2022)
+          <ul>
+            <li>Added "Legato" button to enable the mode for poly notes.</li>
+            <li>Added "here" button routing to the track where the device belongs.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (August 7, 2021)</div>
+      </details>
+    </section>
+    <section id="midirouter">
+      <div class="lang">English / <a href="./ja/#midirouter">日本語</a></div>
+      <h2>MIDI Router</h2>
+      <header>
+        <p><img src="MidiRouter.png" alt="The image of MIDI Router device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/7509">maxforlive.com</a>
+          (the last update: August 7, 2021 / version 1.0.0)</p>
+        <p>Routing MIDI I/O in audio tracks for audio effect devices or plugins which have MIDI input.<br/>
+          Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
+      </header>
+      <details>
+        <summary>Parameters</summary>
         <ul>
-          <li>Fixed the issues when automation set to values might be cancelled and the modulation does not work properly by changing the loop position and slider values even those are different sliders from ones to automate.</li>
+          <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
+          <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br/>
+            Available only when MIDI Input Type has selectable channels.</li>
+          <li>MIDI Output Type: Selects MIDI Output type from MIDI tracks or external MIDI devices. Just like 'MIDI To' of MIDI tracks.</li>
+          <li>MIDI Output Channel: Selects MIDI Output Channel or device from selected output type above.<br/>
+            Available only when MIDI Output Type has selectable channels or devices.</li>
         </ul>
-        <li>Version 1.0.0 : the first release (December 6, 2020)</li>
-      </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#retronome">日本語</a></div>
-    <h2><span id="retronome">Retro-nome</span></h2>
-    <p><img src="retronome.gif"><br/>
-      Download at <a href="https://maxforlive.com/library/device/6723">maxforlive.com</a>
-      (the last update: November 13, 2021 / version 1.0.1)</p>
-    <p>A simple visualization to support syncing sequencer's tempo for live performers. No parameters.</p>
-    <input id="retronome-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="retronome-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>The number of bars and beats may be wrong in Live set with Time Signature Changes.</li>
-        <li>Cannot display the number of bars accurately over a 10 thousand bars.</li>
-      </ul>
-    </div>
-    <input id="retronome-releases" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="retronome-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.0.1 (November 13, 2021)</li>
+      </details>
+      <details open>
+        <summary>Known issues</summary>
         <ul>
-          <li>Renovated drawing function from lcd to jsui. Improved drawing in fast tempo and reduced CPU usage.</li>
+          <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
         </ul>
-        <li>Version 1.0.0 : the first release (November 22, 2020)</li>
-        </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#audioAdsr">日本語</a></div>
-    <h2><span id="audioAdsr">Audio ADSR</span></h2>
-    <p><img src="AudioADSR.png"><br/>
-      Download at <a href="https://maxforlive.com/library/device/7508">maxforlive.com</a>
-      (the last update: April 23, 2022 / version 1.1.0)</p>
-    <p>A super simple ADSR enveloper for audio tracks.<br/>
-      Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
-    <input id="audioAdsr-param" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="audioAdsr-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
-        <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br/>
-          Available only when MIDI Input Type has selectable channels.</li>
-        <li>here: When pressed, MIDI Input will be routed to the track which the device belongs if the track is a MIDI track.</li>
-        <li>Attack: Adjusts the Attack time of the envelope.</li>
-        <li>Decay: Adjusts the Decay time of the envelope.</li>
-        <li>Sustain: Adjusts the Sustain volume of the envelope.</li>
-        <li>Release: Adjusts the Release time of the envelope, literally.</li>
-        <li>V. Sense: Adjusts the velocity sensitivity for the envelope's amplitude.</li>
-        <li>Curve: Adjust the Curvature of the envelope.</li>
-        <li>Dry/Wet: Adjust the ratio of processed sound and raw sound.<br/>
-          TIP: setting negative value produces like sidechain-compressed effect.</li>
-        <li>Legato: When enabled, the envelope wouldn't start with note on while playing at least one note.</li>
-      </ul>
-    </div>
-    <input id="audioAdsr-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="audioAdsr-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
-      </ul>
-    </div>
-    <input id="audioAdsr-releases" class="list-check" type="checkbox" />
-    <label class="list-label" for="audioAdsr-releases">Release notes</label>
-    <div class="list-content">
-      <ul>
-        <li>Changes in version 1.1.0 (April 23, 2022)</li>
-        <ul>
-          <li>Added "Legato" button to enable the mode for poly notes.</li>
-          <li>Added "here" button routing to the track where the device belongs.</li>
-        </ul>
-        <li>Version 1.0.0 : the first release (August 7, 2021)</li>
-      </ul>
-    </div>
-    <hr/>
-    <div class="lang">English / <a href="./ja/#midirouter">日本語</a></div>
-    <h2><span id="midirouter">MIDI Router</span></h2>
-    <p><img src="MidiRouter.png"><br/>
-      Download at <a href="https://maxforlive.com/library/device/7509">maxforlive.com</a>
-      (the last update: August 7, 2021 / version 1.0.0)</p>
-    <p>Routing MIDI I/O in audio tracks for audio effect devices or plugins which have MIDI input.<br/>
-      Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
-    <input id="midirouter-param" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="midirouter-param">Parameters</label>
-    <div class="list-content">
-      <ul>
-        <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
-        <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br/>
-          Available only when MIDI Input Type has selectable channels.</li>
-        <li>MIDI Output Type: Selects MIDI Output type from MIDI tracks or external MIDI devices. Just like 'MIDI To' of MIDI tracks.</li>
-        <li>MIDI Output Channel: Selects MIDI Output Channel or device from selected output type above.<br/>
-          Available only when MIDI Output Type has selectable channels or devices.</li>
-      </ul>
-    </div>
-    <input id="midirouter-issues" class="list-check" type="checkbox" checked />
-    <label class="list-label" for="midirouter-issues">Known issues</label>
-    <div class="list-content">
-      <ul>
-        <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
-      </ul>
-    </div>
-    <hr/>
+      </details>
+    </section>
     <p><a href="../">back</a></p>
   </body>
 </html>
