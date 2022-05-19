@@ -10,24 +10,24 @@
   <body>
     <div class="lang"><a href="../">English</a> / 日本語</div>
     <h1>Max for Live デバイス</h1>
+    <nav>
+      <ul>
+        <li><a href="#altdrum">ALT-Synthdrum</a>: インストゥルメントデバイス</li>
+        <li><a href="#eono">echo on noteoff</a>: MIDIエフェクトデバイス</li>
+        <li><a href="#bounce">bouncing notes</a>: MIDIエフェクトデバイス</li>
+        <li><a href="#pitchwc">PitchW curve</a>: MIDIエフェクトデバイス</li>
+        <li><a href="#afmacro">Audio Frame Macro</a>: オーディオエフェクトデバイス（LFO系）</li>
+        <li><a href="#mfmacro">MIDI Frame Macro</a>: MIDIエフェクトデバイス（LFO系）</li>
+        <li><a href="#retronome">Retro-nome</a>: オーディオエフェクトデバイス（視覚効果のみ）</li>
+        <li><a href="#audioAdsr">Audio ADSR</a>: オーディオエフェクトデバイス</li>
+        <li><a href="#midirouter">MIDI Router</a>: オーディオエフェクトデバイス（ユーティリティ系）</li>
+      </ul>
+    </nav>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#altdrum">ALT-Synthdrum</a>: インストゥルメントデバイス</li>
-          <li><a href="#eono">echo on noteoff</a>: MIDIエフェクトデバイス</li>
-          <li><a href="#bounce">bouncing notes</a>: MIDIエフェクトデバイス</li>
-          <li><a href="#pitchwc">PitchW curve</a>: MIDIエフェクトデバイス</li>
-          <li><a href="#afmacro">Audio Frame Macro</a>: オーディオエフェクトデバイス（LFO系）</li>
-          <li><a href="#mfmacro">MIDI Frame Macro</a>: MIDIエフェクトデバイス（LFO系）</li>
-          <li><a href="#retronome">Retro-nome</a>: オーディオエフェクトデバイス（視覚効果のみ）</li>
-          <li><a href="#audioAdsr">Audio ADSR</a>: オーディオエフェクトデバイス</li>
-          <li><a href="#midirouter">MIDI Router</a>: オーディオエフェクトデバイス（ユーティリティ系）</li>
-        </ul>
-      </nav>
       <p>自作のAbleton Live用プラグインです。Max やAbleton Live をお持ちでない場合でも、<a href="https://www.ableton.com/ja/trial/">こちら</a>からLive Suite のデモ版をダウンロードできます。<br/>
-        なんと90日間無料でMax for Live を含む全ての機能が使えます!! (2020年4月時点)<br/>
-        Ableton Live Suite 9.7.7 / 10.1.25 / 11.1.1、MAX 6.1.7 / 7.3.5 / 8.3.0、Windows 10 (21H2) でのみ正常動作を確認しています。<br/>
-        macOSでの動作は確認していないため、動作状況や問題点について<a href="https://maxforlive.com/profile/user/h1data">コメント</a>か<a href="https://twitter.com/h1data">何か</a>でお知らせ頂けると助かります。</p>
+      なんと90日間無料でMax for Live を含む全ての機能が使えます!! (2020年4月時点)<br/>
+      Ableton Live Suite 9.7.7 / 10.1.25 / 11.1.1、MAX 6.1.7 / 7.3.5 / 8.3.0、Windows 10 (21H2) でのみ正常動作を確認しています。<br/>
+      macOSでの動作は確認していないため、動作状況や問題点について<a href="https://maxforlive.com/profile/user/h1data">コメント</a>か<a href="https://twitter.com/h1data">何か</a>でお知らせ頂けると助かります。</p>
     </header>  
     <section>
       <h3>M4L開発者向け情報</h3>
@@ -578,7 +578,7 @@
       <header>
         <p><img src="../MidiRouter.png"><br/>
           <a href="https://maxforlive.com/library/device/7509">ダウンロード</a> (maxforlive.com)
-          最終更新: 2021/8/7, version 1.0.0</p>
+          最終更新: 2022/5/19, version 1.1.0</p>
         <p>オーディオトラック上でオーディオエフェクトデバイスやプラグインのMIDIルーティングを行えるデバイスです。<br/>
           Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
       </header>
@@ -588,6 +588,9 @@
           <li>MIDI Input Type: MIDI入力元をMIDIトラックか外部MIDI入力から選択します。MIDIトラックの「MIDI From」と大体同じです。</li>
           <li>MIDI Input Channel: MIDI Input Typeで選択した入力からチャンネルを選択します。<br/>
             選択可能なチャンネルを持つMIDI入力が選択されていた場合のみ有効です。</li>
+          <li>Send: デバイスが選択した入力から出力へMIDIメッセージを送信するかどうかを切り替えます。<br/>
+            M4Lはデバイスがオフになった場合、ルーティングされた入力から出力へMIDIメッセージやオーディオシグナルをそのまま送信します。
+            そのため出力への送信を止めたい場合はSendボタンをオフにします。</li>
           <li>MIDI Output Type: MIDI出力先をMIDIトラックか外部MIDI出力から選択します。MIDIトラックの「MIDI To」と大体同じです。</li>
           <li>MIDI Output Channel: MIDI Output Typeで選択した出力からチャンネルかデバイスを選択します。<br/>
             選択可能なチャンネルかデバイスを持つMIDI出力先が選択されていた場合のみ有効です。</li>
@@ -598,6 +601,17 @@
         <ul>
           <li>MIDI入力のタイプやチャンネルを続けて変更し元に戻した際、プルダウンリストが余計に元に戻ってしまう場合があります。</li>
         </ul>
+      </details>
+      <details>
+        <summary>更新履歴</summary>
+        <div class="history">
+          Version 1.1.0 の変更点 (2022/5/19)
+          <ul>
+            <li>選択した出力先へMIDIメッセージを送信するかどうかを切り替えられるSendボタンを追加しました。</li>
+            <li>MIDIメッセージが送受信されたことを示すLEDを追加しました。</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : 初版 (2021/8/7)</div>
       </details>
     </section>
     <p><a href="../../">戻る</a></p>

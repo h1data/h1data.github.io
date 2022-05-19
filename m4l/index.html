@@ -10,26 +10,26 @@
   <body>
     <div class="lang" aria>English / <a href="./ja/">日本語</a></div>
     <h1>Max for Live Devices</h1>
+    <nav>
+      <ul>
+        <li><a href="#altdrum">ALT-Synthdrum</a>: instrument</li>
+        <li><a href="#eono">echo on noteoff</a>: midi effect</li>
+        <li><a href="#bounce">bouncing notes</a>: midi effect</li>
+        <li><a href="#pitchwc">PitchW curve</a>: midi effect</li>
+        <li><a href="#afmacro">Audio Frame Macro</a>: audio effect (LFO-like parameter modulator)</li>
+        <li><a href="#mfmacro">MIDI Frame Macro</a>: midi effect (LFO-like parameter modulator)</li>
+        <li><a href="#retronome">Retro-nome</a>: audio effect (visualization)</li>
+        <li><a href="#audioAdsr">Audio ADSR</a>: audio effect</li>
+        <li><a href="#midirouter">MIDI Router</a>: audio effect (utility device)</li>
+      </ul>
+    </nav>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#altdrum">ALT-Synthdrum</a>: instrument</li>
-          <li><a href="#eono">echo on noteoff</a>: midi effect</li>
-          <li><a href="#bounce">bouncing notes</a>: midi effect</li>
-          <li><a href="#pitchwc">PitchW curve</a>: midi effect</li>
-          <li><a href="#afmacro">Audio Frame Macro</a>: audio effect (LFO-like parameter modulator)</li>
-          <li><a href="#mfmacro">MIDI Frame Macro</a>: midi effect (LFO-like parameter modulator)</li>
-          <li><a href="#retronome">Retro-nome</a>: audio effect (visualization)</li>
-          <li><a href="#audioAdsr">Audio ADSR</a>: audio effect</li>
-          <li><a href="#midirouter">MIDI Router</a>: audio effect (utility device)</li>
-        </ul>
-      </nav>
       <p>Self-made plugin devices for DAW software Ableton Live Suite.<br/>
-        Even if you don't own MAX or Ableton Live, you can download the demo version of Live Suite <a href="https://www.ableton.com/trial/">here</a>.<br/>
-        It's free for 90 days with all functions including Max for Live!! (as of April 2020)<br/>
-        Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.1.1, MAX 6.1.7 / 7.3.5 / 8.3.0 on Windows 10 (21H2).<br/>
-        Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/h1data">notify the author</a>
-        if the device works or doesn't on macOS, or has any inconveniences.</p>
+      Even if you don't own MAX or Ableton Live, you can download the demo version of Live Suite <a href="https://www.ableton.com/trial/">here</a>.<br/>
+      It's free for 90 days with all functions including Max for Live!! (as of April 2020)<br/>
+      Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.1.1, MAX 6.1.7 / 7.3.5 / 8.3.0 on Windows 10 (21H2).<br/>
+      Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/h1data">notify the author</a>
+      if the device works or doesn't on macOS, or has any inconveniences.</p>
     </header>
     <section>
       <h3>For M4L developers</h3>
@@ -591,7 +591,7 @@
       <header>
         <p><img src="MidiRouter.png" alt="The image of MIDI Router device"><br/>
           Download at <a href="https://maxforlive.com/library/device/7509">maxforlive.com</a>
-          (the last update: August 7, 2021 / version 1.0.0)</p>
+          (the last update: May 19, 2022 / version 1.1.0)</p>
         <p>Routing MIDI I/O in audio tracks for audio effect devices or plugins which have MIDI input.<br/>
           Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
       </header>
@@ -601,6 +601,8 @@
           <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
           <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br/>
             Available only when MIDI Input Type has selectable channels.</li>
+          <li>Send: Switches if the device route MIDI messages via I/O. M4L devices send MIDI messages even if inactive (imagine normal effect devices in MIDI/audio chain),
+            thus let the Send button off if you want to stop sending messages.</li>
           <li>MIDI Output Type: Selects MIDI Output type from MIDI tracks or external MIDI devices. Just like 'MIDI To' of MIDI tracks.</li>
           <li>MIDI Output Channel: Selects MIDI Output Channel or device from selected output type above.<br/>
             Available only when MIDI Output Type has selectable channels or devices.</li>
@@ -611,6 +613,17 @@
         <ul>
           <li>Undoing a series of changes for MIDI input type or channel may cause extra revert for pulldown lists.</li>
         </ul>
+      </details>
+      <details>
+        <summary>Release notes</summary>
+        <div class="history">
+          Changes in version 1.1.0 (May 19, 2022)
+          <ul>
+            <li>Added "Send" button to switch if the device sends MIDI messages to the selected output.</li>
+            <li>Added LED indicators to monitor incoming/outgoing MIDI messages.</li>
+          </ul>
+        </div>
+        <div class="history">Version 1.0.0 : the first release (August 7, 2021)</div>
       </details>
     </section>
     <p><a href="../">back</a></p>
