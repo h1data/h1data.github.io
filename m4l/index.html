@@ -27,9 +27,8 @@
       <p>Self-made plugin devices for DAW software Ableton Live Suite.<br/>
       Even if you don't own MAX or Ableton Live, you can download the demo version of Live Suite <a href="https://www.ableton.com/trial/">here</a>.<br/>
       It's free for 90 days with all functions including Max for Live!! (as of April 2020)<br/>
-      Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.1.1, MAX 6.1.7 / 7.3.5 / 8.3.0 on Windows 10 (21H2).<br/>
-      Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/h1data">notify the author</a>
-      if the device works or doesn't on macOS, or has any inconveniences.</p>
+      Checked operational properly only for Ableton Live Suite 9.7.7 / 10.1.14 / 11.1.1, MAX 6.1.7 / 7.3.5 / 8.3.0 on Windows 10 (21H2) and MacOS 12.5 with Apple Silicon.
+      Please <a href="https://maxforlive.com/profile/user/h1data">post a comment</a> or <a href="https://twitter.com/h1data">notify the author</p>
     </header>
     <section>
       <h3>For M4L developers</h3>
@@ -387,6 +386,7 @@
             Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
           <li>Resync button can be automated, however, pressing the button always makes undo histories as a side effect.</li>
           <li>The values below sliders might exceed the input range, however, he actual values in modulation are limited by the input range.</li>
+          <li>The values below sliders do not display properly when it is rather than 3 digits in Live 10 or 11 and Max 8.x.</li>
         </ul>
       </details>
       <details>
@@ -480,6 +480,7 @@
           <li>Without scaling, the maximum absolute modulation value is 128. It seems enough but cannot modulate if the parameter's range is more than 128.<br/>
             Please inform the author know if there is a device which has parameter value more than 128, especially built-in Live devices.</li>
           <li>The value below of each slider cannot display properly when the value is -100 or less. It is not assumed to use with values under -64.</li>
+          <li>The values below sliders do not display properly when it is rather than 3 digits in Live 10 or 11 and Max 8.x.</li>
         </ul>
       </details>
       <details>
