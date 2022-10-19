@@ -21,6 +21,7 @@
         <li><a href="#retronome">Retro-nome</a>: audio effect (visualization)</li>
         <li><a href="#audioAdsr">Audio ADSR</a>: audio effect</li>
         <li><a href="#midirouter">MIDI Router</a>: audio effect (utility device)</li>
+        <li><a href="#phototacticxy">Phototactic XY</a>: audio effect (LFO-like parameter modulator)</li>
       </ul>
     </nav>
     <header>
@@ -631,6 +632,43 @@
           </ul>
         </div>
         <div class="history">Version 1.0.0 : the first release (August 7, 2021)</div>
+      </details>
+    </section>
+    <section id="phototacticxy">
+      <div class="lang">English / <a href="./ja/#phototacticxy">日本語</a></div>
+      <h2>Phototactic XY</h2>
+      <header>
+        <p><img src="PhototacticXY.gif" alt="The image of Phototactic XY device"><br/>
+          Download at <a href="https://maxforlive.com/library/device/8437">maxforlive.com</a>
+          (the last update: October 19, 2022 / version 1.0.0)</p>
+        <p>Typical but the most uncertain XY pad. Simulates a bug randomly flies being attracted by light.</p>
+      </header>
+      <details open>
+        <summary>Parameters</summary>
+        <ul>
+          <li>Mode: Switches the behavior of movements.<br/>
+            Step: Changes position at interval time.<br/>
+            Line: moves in a straight line and changes direction at interval time.<br/>
+            Curve: Accelerates to the randomized direction. In this mode, the width of movement is halved to suppress overrun by acceleration.<br/>
+            The image of automation in each mode<br/>
+            <img src="phototactic_modes.png" alt="the image of automation in each mode" /></li>
+          <li>Map X / Map Y: Press and select a parameter to map by each coordinate. Press again to cancel mapping.</li>
+          <li>Fold (▶) / Unfold (▼) : Toggles to fold/unfold the advanced parameters.</li>
+          <li>X-Y Control:<br/>
+            Click or drag to move the circle as the attractor. (orange in default Live color themes)<br/>
+            Actual effect is represented by moving line. (blue in default Live color themes)</li>
+          <li>X Width: Represents the ratio of random line movements for X coordinate.</li>
+          <li>Y Width: Represents the ratio of random line movements for Y coordinate.</li>
+          <li>Link Width: Toggles to equal the X and Y width.</li>
+          <li>Interval: Represents the interval time of line movements.</li>
+            The line moves every sample in 0ms but most parameters in devices/plugins would not be supported to the rate.
+          <li>Attract: Represents the ratio how the line movement is attracted by the attractor.</li>
+          <li>Position X/Y: Represents the X and Y coordinate of the attractor.</li>
+        </ul>
+      </details>
+      <details open>
+        <summary>Release notes</summary>
+        <div class="history">Version 1.0.0 : the first release (October 19 2022)</div>
       </details>
     </section>
     <p><a href="../">back</a></p>

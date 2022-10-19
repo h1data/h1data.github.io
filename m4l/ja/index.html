@@ -21,6 +21,7 @@
         <li><a href="#retronome">Retro-nome</a>: オーディオエフェクトデバイス（視覚効果のみ）</li>
         <li><a href="#audioAdsr">Audio ADSR</a>: オーディオエフェクトデバイス</li>
         <li><a href="#midirouter">MIDI Router</a>: オーディオエフェクトデバイス（ユーティリティ系）</li>
+        <li><a href="#phototacticxy">Phototactic XY</a>: audio effect (LFO系)</li>
       </ul>
     </nav>
     <header>
@@ -621,6 +622,43 @@
           </ul>
         </div>
         <div class="history">Version 1.0.0 : 初版 (2021/8/7)</div>
+      </details>
+    </section>
+    <section id="phototacticxy">
+      <div class="lang"><a href="../#phototacticxy">English</a> / 日本語</div>
+      <h2>Phototactic XY</h2>
+      <header>
+        <p><img src="../PhototacticXY.gif" alt="The image of Phototactic XY device"><br/>
+          <a href="https://maxforlive.com/library/device/8437">ダウンロード</a> (maxforlive.com)
+          最終更新: 2022/10/19, version 1.0.0</p>
+        <p>典型的ですが最も不確実なXYパッドです。光に引き寄せられる虫の動きを模しています。</p>
+      </header>
+      <details open>
+        <summary>パラメータ</summary>
+        <ul>
+          <li>Mode: 動き方を切り替えます。<br/>
+            Step: Intervalの時間ごとに一定距離でランダムな方向に動きます。<br/>
+            Line: 直線的に動き、Intervalの時間ごとに方向が変わります。<br/>
+            Curve: ランダムな方向に向かって加速します。このモードでは加速により意図した幅より大きく動くのを抑制するため、Widthの効果は半分になります。<br/>
+            (各モードでのパラメーター変化のイメージ)<br/>
+            <img src="../phototactic_modes.png" alt="各モードでのパラメーター変化のイメージ" /></li>
+          <li>Map X / Map Y: クリックしてからパラメーターを選択するとマッピングされます。もう一度押すとマッピングが取り消されます。</li>
+          <li>Fold (▶) / Unfold (▼) : 右側パラメータの表示・非表示を切り替えます。</li>
+          <li>X-Y Control:<br/>
+            クリックかドラッグで円マークを動かします。(既定のLiveカラーテーマではオレンジ)<br/>
+            実際は動いている線 (既定のLiveカラーテーマでは青) の座標によりマッピングされたパラメータが変化します。</li>
+          <li>X Width: ランダムな動きのX座標幅を指定します。</li>
+          <li>Y Width: ランダムな動きのY座標幅を指定します。</li>
+          <li>Link Width: X座標とY座標の動きの幅を等しくするかどうかを切り替えます。</li>
+          <li>Interval: 動きの間隔を時間で指定します。</li>
+            0msにすると毎オーディオサンプルごとに動きますが、多くのデバイスやプラグインでは追随できません。</li>
+          <li>Attract: ランダムな動きがどれだけ円マークに引き寄せられるかの割合を指定します。</li>
+          <li>Position X/Y: 円マークのX座標およびY座標を表します。オートメーションを設定できます。</li>
+        </ul>
+      </details>
+      <details open>
+        <summary>Release notes</summary>
+        <div class="history">Version 1.0.0 : 初版 (2022/10/19)</div>
       </details>
     </section>
     <p><a href="../../">戻る</a></p>
