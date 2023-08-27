@@ -119,9 +119,9 @@
       <div class="lang"><a href="../#eono">English</a> / 日本語</div>
       <h2>echo on noteoff</h2>
       <header>
-        <p><img src="../eono.gif"><br>
+        <p><img src="../eono.png"><br>
           Download at <a href="https://maxforlive.com/library/device/5563/echo-on-noteoff">ダウンロード</a> (maxforlive.com)
-          最終更新: 2020/6/27, version 1.0.0</p>
+          最終更新: 2023/8/27, version 2.0.0</p>
         <p>分散和音用の実験的なMIDIエフェクトです。<br>
           Arpeggiatorの前段に置くと、アルペジオの音量が減衰していく効果が得られます。</p>
       </header>
@@ -132,7 +132,7 @@
           <li>Delay mode (Sync/Free): ノートオフからエコー発生までの遅延時間をテンポに同期するかミリ秒で指定するかを切り替えます。</li>
           <li>Delay (free/sync): ノートオフからエコー発生までの遅延時間を調整します。</li>
           <li>Duration mode (Sync/Free): エコーノートの長さをテンポに同期するかミリ秒で指定するかを切り替えます。</li>
-          <li>Delay (free/sync): エコーノートの長さを調整します。</li>
+          <li>Duration(free/sync): エコーノートの長さを調整します。</li>
           <li>Feedback: エコーのフィードバックの割合を調整します。</li>
           <li>Velocity: 最初のエコーのヴェロシティを割合で調整します。</li>
           <li>Reset: 全てのノートを止めます。ボタンを押すたびにLiveの元に戻す履歴が作成されます。</li>
@@ -151,6 +151,14 @@
       </details>
       <details>
         <summary>更新履歴</summary>
+        <div class="history">
+          Version 2.0.0 の変更点 (2023/8/27)
+          <ul>
+            <li>重要な変更: 動作環境がAbleton Live 11.1 / Max 8.2 以降になりました。それより前の環境向けには、GitHubにある過去のReleaseを使用してください。</li>
+            <li>UIを調整しました。</li>
+            <li>Pushで使用できるようになりました。</li>
+          </ul>
+        </div>
         <div class="history">
           Version 1.0.0 の変更点 (2020/6/27)
           <ul>
@@ -665,7 +673,7 @@
           <li>X Width: ランダムな動きのX座標幅を指定します。</li>
           <li>Y Width: ランダムな動きのY座標幅を指定します。</li>
           <li>Link Width: X座標とY座標の動きの幅を等しくするかどうかを切り替えます。</li>
-          <li>Interval: 動きの間隔を時間で指定します。</li>
+          <li>Interval: 動きの間隔を時間で指定します。<br>
             0msにすると毎オーディオサンプルごとに動きますが、多くのデバイスやプラグインでは追随できません。</li>
           <li>Attract: ランダムな動きがどれだけ円マークに引き寄せられるかの割合を指定します。</li>
           <li>Position X/Y: 円マークのX座標およびY座標を表します。オートメーションを設定できます。</li>
