@@ -1,4 +1,5 @@
 body {
+  font-size: 12pt;
   margin: 1em;
   font-family: Helvetica, Arial, sans-serif;
   background-color: #AAB2B7;
@@ -27,13 +28,16 @@ section {
   border-bottom: 1px #808080 solid;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul {
   margin-top: 0.5em;
   margin-bottom: 1em;
 }
 
 .lang {
-  font-size: 1em;
   margin-right: 1em;
   float: right;
 }
@@ -67,4 +71,13 @@ div.history {
 .history ul {
   margin: 0.25em;
   list-style-type: circle;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 11.5px;
+  }
+  .lang {
+    margin-right: 0;
+  }
 }
