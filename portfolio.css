@@ -3,6 +3,7 @@ body {
   color: #333333;
   margin: 0;
   font-family: Noto Sans JP;
+  font-size: 12pt;
 }
 
 .menu-frame {
@@ -10,31 +11,59 @@ body {
   display: block;
   top: 0;
   width: 100%;
-  height: 5em;
+  height: 5rem;
   border: none;
 }
 
 .menu-body {
-  margin: 1.5em 0 0 2em;
+  padding: 1.5rem 0 0 2em;
 }
 
 .menu-body a {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 main {
-  margin: 0 0 2em 2em;
+  margin: 0 2rem;
+  padding-bottom: 3rem;
 }
 
-h2, h3, ul, li {
-  width: fit-content;
+iframe, h2, h3, ul, li {
+  /* width: fit-content; */
+  max-width: 100%;
+}
+
+ul {
+  padding-inline-start: 2rem;
 }
 
 li {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .work-title {
   font-size: 1.15em;
   font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+  main {
+    margin: 0 1rem;
+  }
+  .menu-frame {
+    height: 3rem;
+  }
+  .menu-body {
+    padding: 1rem 0 0 2em;
+  }
+  .menu-body a {
+    margin-left: 1rem;
+  }
 }
