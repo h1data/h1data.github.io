@@ -1,0 +1,40 @@
+body {
+  background-color: #f0efeb;
+  color: #333333;
+  margin: 0;
+  font-family: Noto Sans JP;
+}
+
+.menu-frame {
+  position: sticky;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 5em;
+  border: none;
+}
+
+.menu-body {
+  margin: 1.5em 0 0 2em;
+}
+
+.menu-body a {
+  margin-left: 1em;
+}
+
+main {
+  margin: 0 0 2em 2em;
+}
+
+h2, h3, ul, li {
+  width: fit-content;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+.work-title {
+  font-size: 1.15em;
+  font-weight: bold;
+}
