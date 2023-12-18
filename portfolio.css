@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP');
+
 body {
-  background-color: #f0efeb;
+  background-color: #f0efee;
   color: #333333;
   margin: 0;
   font-family: Noto Sans JP;
@@ -15,17 +17,18 @@ body {
   border: none;
 }
 
-.menu-body {
+.menu-nav {
   padding: 1.5rem 0 0 2em;
 }
 
-.menu-body a {
+.menu-nav a {
   margin-left: 1rem;
 }
 
 main {
-  margin: 0 2rem;
+  margin: auto;
   padding-bottom: 3rem;
+  width: calc(700px - 4rem);
 }
 
 iframe, h2, h3, ul, li {
@@ -50,20 +53,33 @@ img {
   max-width: 100%;
 }
 
+@media screen and (max-width: calc(700px + 2rem)) {
+  main {
+    margin: 0 2rem;
+    width: fit-content;
+  }
+}
+
 @media screen and (max-width: 600px) {
   body {
     font-size: 12px;
   }
   main {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
   }
   .menu-frame {
     height: 3rem;
   }
-  .menu-body {
+  .menu-nav {
     padding: 1rem 0 0 2em;
   }
-  .menu-body a {
+  .menu-nav a {
     margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu-nav a {
+    margin-left: 0.5rem;
   }
 }
