@@ -8,17 +8,12 @@ body {
   font-size: 12pt;
 }
 
-.menu-frame {
+.menu-nav {
   position: sticky;
   display: block;
   top: 0;
-  width: 100%;
-  height: 5rem;
-  border: none;
-}
-
-.menu-nav {
-  padding: 1.5rem 0 0 2em;
+  background: #f0efee;
+  padding: 1.5rem 2rem;
 }
 
 .menu-nav a {
@@ -29,11 +24,7 @@ main {
   margin: auto;
   padding-bottom: 3rem;
   width: calc(700px - 4rem);
-}
-
-iframe, h2, h3, ul, li {
-  /* width: fit-content; */
-  max-width: 100%;
+  max-width: calc(700px - 4rem);
 }
 
 ul {
@@ -49,7 +40,7 @@ li {
   font-weight: bold;
 }
 
-img {
+iframe, img {
   max-width: 100%;
 }
 
@@ -67,11 +58,8 @@ img {
   main {
     margin: 0 1.5rem;
   }
-  .menu-frame {
-    height: 3rem;
-  }
   .menu-nav {
-    padding: 1rem 0 0 2em;
+    padding: 1rem 2em;
   }
   .menu-nav a {
     margin-left: 1rem;
