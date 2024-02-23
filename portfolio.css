@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: Noto Sans JP;
   font-size: 12pt;
+  overflow-x: hidden;
 }
 
 .menu-nav {
@@ -42,6 +43,11 @@ li {
 
 iframe, img {
   max-width: 100%;
+}
+
+footer {
+  text-align: right;
+  padding-right: 2rem;
 }
 
 @media screen and (max-width: calc(700px + 2rem)) {
