@@ -6,14 +6,9 @@ body {
   color: Black;
 }
 
-a:link {
+a:link, a:visited {
   text-decoration: none;
-  color : #0046f0;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #0046f0;
+  color : #0003b3;
 }
 
 a:hover, a:active {
@@ -42,7 +37,8 @@ ul {
   float: right;
 }
 
-h3 {
+h2.m4l-dev-info {
+  font-size: 1.17em;
   font-weight: normal;
   margin-left: 0.5em;
   margin-bottom: 0.5em;
