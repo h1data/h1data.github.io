@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>svg loader</title>
+    <style>
+      body {
+        font-family: Arial;
+        font-size: 9.5px;
+        overflow: hidden;
+        margin: 2px;
+        padding: 0;
+      }
+      #display-image {
+        display: absolute;
+        margin: auto;
+        /* background: #666666; */
+        border: none;
+        width: 110px;
+        height: 110px;
+      }
+      #display-image svg {
+        stroke-width: 5px;
+        /* fill: #ffad5640;
+        stroke: #ffad56; */
+        width: 110px;
+        height: 110px;
+      }
+    </style>
+    <script>
+
+      window.onload = function() {
+        // window.max.outlet('post', 'window.onload start');
+
+        const WIDTH = 1024;
+        const HEIGHT = 128;
+
+        const canvas = document.createElement('canvas');
+        canvas.height = HEIGHT;
+        canvas.width = WIDTH;
+        /** @type{CanvasRenderingContext2D} */
+        const ctx = canvas.getContext('2d');
+        const displayImage = document.getElementById('display-image');
+        let svgText;
+
+        let analyzeImage;
+        let fgColor ="#ffad56";
+
+        window.max.bindInlet('lcd_control_fg', function (r, g, b, a) {
+          fgColor = `#${toHex(r) + toHex(g) + toHex(b)}`;
+          applyColor();
+        });
+
+        window.max.bindInlet('startSvg', function() {
+          // window.max.outlet('post', 'startSvg start');
+          svgText = "";
+          // window.max.outlet('post', 'startSvg end');
+        });
+        window.max.bindInlet('setSvg', function(text) {
+          // window.max.outlet('post', 'setSvg start', text);
+          svgText = svgText + text;
+          // window.max.outlet('post', 'setSvg end');
+        });
+        window.max.bindInlet('endSvg', function() {
+          // window.max.outlet('post', 'endSvg start', svgText);
+          
+          analyzeImage = document.createElement('img');
+          analyzeImage.width = WIDTH;
+          analyzeImage.height = HEIGHT;
+          analyzeImage.addEventListener('load', function() { 
+            // window.max.outlet('post', 'onLoadImage start');
+            // embed raw html after svgText was loaded as image file
+            displayImage.innerHTML = svgText;
+            displayImage.hidden = false;
+            applyColor();
+
+            ctx.reset();
+            ctx.drawImage(analyzeImage, 0, 0, WIDTH, HEIGHT);
+            const pixels = ctx.getImageData(0, 0, WIDTH, HEIGHT).data;
+            for (let y = 0; y < HEIGHT; y++) {
+              const row = new Array();
+              for (let x = 0; x < WIDTH; x++) {
+                const alpha = pixels[(y * WIDTH + x) * 4 + 3];
+                row.push(alpha == 255 ? 1 : 0);
+              }
+              window.max.outlet('data', 'setData', 127 - y, JSON.stringify(row));
+            }
+            window.max.outlet('data', 'request');
+            // window.max.outlet('post', 'onLoadImage end');
+          });
+
+          analyzeImage.src = `data:image/svg+xml,${encodeURIComponent(svgText)}`;
+          // window.max.outlet('post', 'endSvg end');
+        });
+
+        function applyColor() {
+          let svgElements = displayImage.getElementsByTagName('svg');
+          for (let element of svgElements){
+            element.style.stroke = fgColor;
+            element.style.fill = fgColor + '40'; // alpha = 25% 
+            element.width = 110;
+            element.height = 110;
+          };
+        }
+
+        // window.max.outlet('post', 'window.onload end');
+        window.max.outlet('color', 'bang');
+      }
+
+      function toHex(num) {
+        let str = Math.round((num * 255)).toString(16);
+        return str.length == 1 ? '0' + str : str;
+      }
+
+    </script>
+  </head>
+  <body>
+    <div hidden id="display-image"></div>
+  </body>
+</html>
