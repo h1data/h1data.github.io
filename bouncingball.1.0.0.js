@@ -19,10 +19,10 @@ window.addEventListener('load', () => {
     STOPPED: 2
   };
 
-  let displayArea = ((document.currentScript == undefined) ?
-    document.querySelector('script[src="bouncingball.1.0.0.js"]')
+  console.log(document.currentScript);
+  let displayArea = ((document.currentScript == undefined || document.currentScript == null) ?
+    document.querySelector('script[src*="/bouncingball.1.0.0.js"]')
     : document.currentScript).parentElement;
-
 
   const canvas = document.createElement('canvas');
   canvas.width = 120;
