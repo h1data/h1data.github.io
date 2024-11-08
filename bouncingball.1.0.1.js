@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
 
   console.log(document.currentScript);
   let displayArea = ((document.currentScript == undefined || document.currentScript == null) ?
-    document.querySelector('script[src*="/bouncingball.1.0.0.js"]')
+    document.querySelector('script[src*="bouncingball.1.0.1.js"]')
     : document.currentScript).parentElement;
 
   const canvas = document.createElement('canvas');
