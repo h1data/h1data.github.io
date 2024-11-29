@@ -651,7 +651,7 @@
       <header>
         <p><img src="MidiRouter.png" alt="The image of MIDI Router device"><br>
           Download at <a href="https://maxforlive.com/library/device/7509">maxforlive.com</a>
-          (the last update: May 19, 2022 / version 1.1.0)</p>
+          (the last update: November 29, 2024 / version 1.2.0)</p>
         <p>Routing MIDI I/O in audio tracks for audio effect devices or plugins which have MIDI input.<br>
           Available for use only in Live 11.0.5/Max 8.1.11 or above versions.</p>
       </header>
@@ -661,6 +661,7 @@
           <li>MIDI Input Type: Selects MIDI input type from MIDI tracks or external MIDI devices. Just like 'MIDI From' of MIDI tracks.</li>
           <li>MIDI Input Channel: Selects MIDI Input Channel from selected input type above.<br>
             Available only when MIDI Input Type has selectable channels.</li>
+          <li>Route Here button: When pressed, MIDI Input will be routed to the track which the device belongs if the track is a MIDI track.</li>
           <li>Send: Switches if the device route MIDI messages via I/O. M4L devices send MIDI messages even if inactive (imagine normal effect devices in MIDI/audio chain),
             thus let the Send button off if you want to stop sending messages.</li>
           <li>MIDI Output Type: Selects MIDI Output type from MIDI tracks or external MIDI devices. Just like 'MIDI To' of MIDI tracks.</li>
@@ -677,6 +678,10 @@
       <details>
         <summary>Release notes</summary>
         <div class="history">
+          Changes in version 1.2.0 (November 29, 2024)
+          <ul>
+            <li>Added `Route Here` button</li>
+          </ul>
           Changes in version 1.1.0 (May 19, 2022)
           <ul>
             <li>Added "Send" button to switch if the device sends MIDI messages to the selected output.</li>

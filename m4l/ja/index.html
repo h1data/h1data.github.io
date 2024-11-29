@@ -639,7 +639,7 @@
       <header>
         <p><img src="../MidiRouter.png"><br>
           <a href="https://maxforlive.com/library/device/7509">ダウンロード</a> (maxforlive.com)
-          最終更新: 2022/5/19, version 1.1.0</p>
+          最終更新: 2024/11/29, version 1.2.0</p>
         <p>オーディオトラック上でオーディオエフェクトデバイスやプラグインのMIDIルーティングを行えるデバイスです。<br>
           Live 11.0.5 / Max 8.1.11 以降でのみ使用可能です。</p>
       </header>
@@ -649,6 +649,7 @@
           <li>MIDI Input Type: MIDI入力元をMIDIトラックか外部MIDI入力から選択します。MIDIトラックの「MIDI From」と大体同じです。</li>
           <li>MIDI Input Channel: MIDI Input Typeで選択した入力からチャンネルを選択します。<br>
             選択可能なチャンネルを持つMIDI入力が選択されていた場合のみ有効です。</li>
+          <li>Route Hereボタン: デバイスがMIDIトラックにある場合、押すとそのトラックをMIDI入力元として選択します。</li>
           <li>Send: デバイスが選択した入力から出力へMIDIメッセージを送信するかどうかを切り替えます。<br>
             M4Lはデバイスがオフになった場合、ルーティングされた入力から出力へMIDIメッセージやオーディオシグナルをそのまま送信します。
             そのため出力への送信を止めたい場合はSendボタンをオフにします。</li>
@@ -666,6 +667,10 @@
       <details>
         <summary>更新履歴</summary>
         <div class="history">
+          Version 1.2.0 の変更点 (2024/11/29)
+          <ul>
+            <li>`Route Here` ボタンを追加しました。</li>
+          </ul>
           Version 1.1.0 の変更点 (2022/5/19)
           <ul>
             <li>選択した出力先へMIDIメッセージを送信するかどうかを切り替えられるSendボタンを追加しました。</li>
